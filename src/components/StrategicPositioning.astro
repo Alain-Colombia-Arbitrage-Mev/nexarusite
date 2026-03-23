@@ -42,6 +42,14 @@
       <span>POSITIONING</span>
     </div>
   </div>
+
+  <!-- Decorative connector lines from badge — Figma 857:357 (vertical) + 857:356 (horizontal) -->
+  <div class="sp__connector anim-fade-right">
+    <!-- Vertical line down from badge -->
+    <div class="sp__connector-v"></div>
+    <!-- Horizontal line going right -->
+    <div class="sp__connector-h"></div>
+  </div>
 </section>
 
 <style>
@@ -62,18 +70,18 @@
     pointer-events: none;
   }
 
-  /* Glass card — Figma 857:349 */
+  /* Glass card — Figma 857:349: left:169px, vertically centered */
   .sp__panel {
     position: absolute;
     left: 8.8%;             /* 169/1920 */
-    top: 50%;
-    transform: translateY(-50%);
+    top: 10%;
+    transform: none;
     width: clamp(400px, 36.25vw, 696px);        /* 696/1920 */
     z-index: 3;
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    padding: 50px 47px 40px;
+    gap: 16px;
+    padding: 40px 47px 36px;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 18.7px;
     backdrop-filter: blur(12px);
@@ -117,7 +125,7 @@
   /* White CTA — Figma 857:353 */
   .sp__panel .cta-btn--white {
     align-self: center;
-    margin-top: 16px;
+    margin-top: 8px;
   }
 
   /* Badge — Figma 857:355: right:393px top:201px */
@@ -156,6 +164,31 @@
       0 1px 3px rgba(0, 0, 0, 0.8);
   }
 
+  /* Decorative connector lines — Figma 857:356 + 857:357 */
+  .sp__connector {
+    position: absolute;
+    /* Vertical line starts below badge circle center */
+    right: calc(20.5% + 50px);     /* aligned with badge circle center */
+    top: calc(18.6% + 110px);      /* below badge */
+    z-index: 3;
+    pointer-events: none;
+  }
+
+  .sp__connector-v {
+    width: 2px;
+    height: 30.8vh;               /* ~333/1080 */
+    background: rgba(213, 213, 213, 0.4);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .sp__connector-h {
+    width: 25.8vh;                 /* ~278/1080 */
+    height: 2px;
+    background: rgba(213, 213, 213, 0.4);
+    margin-top: -1px;
+  }
+
   /* ---- Responsive ---- */
   @media (max-width: 1600px) {
     .sp__panel {
@@ -191,6 +224,7 @@
       top: 50%;
     }
     .sp__badge { display: none; }
+    .sp__connector { display: none; }
   }
 
   @media (max-width: 768px) {
