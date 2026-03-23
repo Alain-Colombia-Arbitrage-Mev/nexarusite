@@ -1,0 +1,72 @@
+---
+const links = [
+  { id: 'strategic', label: 'STRATEGIC POSITIONING' },
+  { id: 'advantages', label: 'KEY ADVANTAGES OF UAE' },
+  { id: 'provides', label: 'WHAT NGS PROVIDES' },
+  { id: 'services', label: 'CORE SERVICE STRUCTURE' },
+  { id: 'clients', label: 'TARGET CLIENT PROFILE' },
+];
+---
+
+<nav class="nav" id="main-nav">
+  <div class="nav__logo">
+    <img src="/logo.svg" alt="Nexaru Global Services" width="50" height="50" />
+  </div>
+  <div class="nav__links">
+    {links.map(link => (
+      <button class="nav__link" data-target={link.id}>
+        {link.label}
+      </button>
+    ))}
+  </div>
+</nav>
+
+<style>
+  .nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    padding: 20px 50px;
+    gap: 40px;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+
+  .nav.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .nav__logo {
+    flex-shrink: 0;
+  }
+
+  .nav__links {
+    display: flex;
+    align-items: center;
+    gap: 39px;
+    margin-left: auto;
+  }
+
+  .nav__link {
+    font-family: var(--f-primary);
+    font-weight: var(--f-weight-light);
+    font-size: 0.9rem;
+    color: var(--c-text-muted);
+    letter-spacing: 0.02em;
+    transition: color var(--t-fast), opacity var(--t-fast);
+    opacity: 0.8;
+    white-space: nowrap;
+  }
+
+  .nav__link:hover,
+  .nav__link.is-active {
+    opacity: 1;
+    color: white;
+  }
+</style>

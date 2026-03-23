@@ -1,0 +1,52 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import Loader from '../components/Loader.astro';
+import Transition from '../components/Transition.astro';
+import Hero from '../components/Hero.astro';
+import StrategicPositioning from '../components/StrategicPositioning.astro';
+import KeyAdvantages from '../components/KeyAdvantages.astro';
+import WhatNGSProvides from '../components/WhatNGSProvides.astro';
+import CoreServiceStructure from '../components/CoreServiceStructure.astro';
+import TargetClientProfile from '../components/TargetClientProfile.astro';
+import FinalCTA from '../components/FinalCTA.astro';
+---
+
+<Layout title="Nexaru Global Services — UAE Migration & Investment">
+  <Loader />
+  <Nav />
+
+  <div class="scroll-container">
+    <!-- 0: Hero -->
+    <Hero />
+
+    <!-- 1: Transition to Strategic Positioning -->
+    <Transition id="trans-02" video="/videos/Secuencia 002.mp4" index={1} />
+
+    <!-- 2: Strategic Positioning -->
+    <StrategicPositioning />
+
+    <!-- 3: Transition to Key Advantages -->
+    <Transition id="trans-04" video="/videos/Secuencia 004.mp4" index={3} />
+
+    <!-- 4: Key Advantages of UAE -->
+    <KeyAdvantages />
+
+    <!-- 5: What NGS Provides -->
+    <WhatNGSProvides />
+
+    <!-- 6: Transition to Core Services -->
+    <Transition id="trans-07" video="/videos/Secuencia 007.mp4" index={6} />
+
+    <!-- 7: Core Service Structure -->
+    <CoreServiceStructure />
+
+    <!-- 8: Target Client Profile -->
+    <TargetClientProfile />
+
+    <!-- 9: Final CTA -->
+    <FinalCTA />
+  </div>
+
+  <script src="../scripts/main.js"></script>
+</Layout>

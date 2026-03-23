@@ -1,0 +1,18 @@
+---
+interface Props {
+  id: string;
+  video: string;
+  index: number;
+}
+const { id, video, index } = Astro.props;
+---
+
+<section class="section section--transition" id={`section-${id}`} data-section={id} data-video={video} data-transition="true">
+  <video class="section__video" muted playsinline preload="none"></video>
+</section>
+
+<style>
+  .section--transition {
+    background: var(--c-bg);
+  }
+</style>

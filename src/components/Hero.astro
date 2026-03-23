@@ -1,0 +1,387 @@
+---
+const sideIcons = [
+  {
+    label: ['STRATEGIC', 'POSITIONING'],
+    target: 'strategic',
+    icon: `<svg width="38" height="38" viewBox="0 0 38 38" fill="none"><path d="M11.68 9.35c1.08 0 2.14.32 3.04.93.9.6 1.6 1.46 2.01 2.46.41 1 .51 2.1.29 3.16-.22 1.06-.75 2.03-1.52 2.79h.86c.62 0 1.21.25 1.65.69.44.44.69 1.03.69 1.65s-.25 1.21-.69 1.65c-.44.44-1.03.69-1.65.69h-.58c.59 2.79 2.33 4.67 3.33 5.54.65.57 1.14 1.43 1.14 2.42 0 .39-.08.77-.22 1.13-.15.36-.37.68-.64.95-.27.27-.6.49-.96.64-.36.15-.74.22-1.13.22H6.06c-.39 0-.77-.08-1.13-.22-.36-.15-.68-.37-.95-.64-.27-.27-.49-.6-.64-.96-.15-.36-.22-.74-.22-1.13 0-.99.49-1.85 1.14-2.42 1-.88 2.74-2.75 3.33-5.54h-.58c-.62 0-1.21-.25-1.65-.69-.44-.44-.69-1.03-.69-1.65s.25-1.21.69-1.65c.44-.44 1.03-.69 1.65-.69h.86c-.77-.76-1.3-1.73-1.52-2.79-.22-1.06-.12-2.16.29-3.16.41-1 1.11-1.86 2.01-2.46.9-.6 1.96-.93 3.04-.93zM20.25 3.12c.41 0 .81.16 1.1.46.29.29.46.69.46 1.1v1.95c0 .31.12.61.34.83.22.22.52.34.83.34.31 0 .61-.12.83-.34.22-.22.34-.52.34-.83V4.68c0-.41.16-.81.46-1.1.29-.29.69-.46 1.1-.46.41 0 .81.16 1.1.46.29.29.46.69.46 1.1v1.95c0 .31.12.61.34.83.22.22.52.34.83.34.31 0 .61-.12.83-.34.22-.22.34-.52.34-.83V4.68c0-.41.16-.81.46-1.1.29-.29.69-.46 1.1-.46h.39c.31 0 .61.12.83.34.22.22.34.52.34.83v6.62c0 .83-.33 1.62-.91 2.2-.58.58-1.38.91-2.2.91h-.34c.41 8.5 3.37 13.59 4.4 15.13.37.55.62 1.22.62 1.94 0 1.76-1.42 3.18-3.18 3.18H20.7c.69-.79 1.1-1.82 1.1-2.94 0-1.52-.75-2.78-1.67-3.59-.36-.32-.7-.66-1.01-1.04 1.24-2.57 2.74-6.82 3.02-12.68h-.34c-.83 0-1.62-.33-2.2-.91-.58-.58-.91-1.38-.91-2.2V4.28c0-.31.12-.61.34-.83.22-.22.52-.34.83-.34h.39z" fill="#D5D5D5"/></svg>`,
+  },
+  {
+    label: ['KEY ADVANTAGES', 'OF UAE'],
+    target: 'advantages',
+    icon: `<svg width="38" height="38" viewBox="0 0 38 38" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M34.27 12.92c0 5.41-4.41 9.8-9.85 9.8-1-.01-3.25-.22-4.35-1.14l-1.37 1.37c-.81.81-.59 1.04-.23 1.43.15.16.32.35.46.62 0 0 1.14 1.6-.01 3.19-.69.91-2.61 2.19-4.81-.01l-.46.46s1.37 1.6.23 3.19c-.69.91-2.52 1.82-4.12.23L8.17 33.66c-1.1 1.1-2.44.46-2.97-.01l-1.38-1.37c-1.28-1.28-.53-2.66 0-3.19L15.72 17.25s-1.14-1.82-1.14-4.33c0-5.41 4.41-9.8 9.85-9.8s9.84 4.39 9.84 9.8zm-9.85 3.42c.91 0 1.78-.36 2.42-1.0.65-.64 1.01-1.51 1.01-2.42 0-.45-.09-.9-.26-1.31-.17-.42-.42-.79-.74-1.11-.32-.32-.69-.57-1.11-.74-.42-.17-.86-.26-1.32-.26-.45 0-.9.09-1.31.26-.42.17-.79.42-1.11.74-.32.32-.57.69-.74 1.11-.17.42-.26.86-.26 1.31 0 .91.36 1.78 1.01 2.42.64.64 1.51 1.0 2.42 1.0z" fill="#D5D5D5"/></svg>`,
+  },
+  {
+    label: ['WHAT NEXARU GLOBAL', 'SERVICES PROVIDES'],
+    target: 'provides',
+    icon: `<svg width="47" height="47" viewBox="0 0 47 47" fill="none"><path d="M35.63 14.02H24.53v4.09c0 2.9-2.36 5.26-5.26 5.26s-5.26-2.36-5.26-5.26V9.23l-4.74 2.85c-1.41.84-2.27 2.37-2.27 4v3.45l-5.84 3.37c-1.12.64-1.5 2.07-.85 3.19l5.84 10.12c.64 1.12 2.07 1.49 3.19.85l7.55-4.36h9.97c2.58 0 4.67-2.1 4.67-4.67h1.17c1.29 0 2.34-1.04 2.34-2.34v-4.67h.58c.97 0 1.75-.78 1.75-1.75v-3.5c0-.97-.78-1.75-1.75-1.75zM46.41 11.29l-5.84-10.12c-.64-1.12-2.07-1.49-3.19-.85l-7.55 4.36h-7.46c-.88 0-1.73.25-2.47.71l-2.45 1.53c-.69.42-1.1 1.17-1.1 1.98v9.22c0 1.61 1.31 2.92 2.92 2.92s2.92-1.31 2.92-2.92v-6.43h13.43c2.26 0 4.09 1.83 4.09 4.09v2.08l5.84-3.37c1.12-.65 1.49-2.07.85-3.19z" fill="#D5D5D5"/></svg>`,
+  },
+  {
+    label: ['CORE SERVICE', 'STRUCTURE'],
+    target: 'services',
+    icon: `<svg width="38" height="38" viewBox="0 0 38 38" fill="none"><path d="M24.5 14.78l6.65-4.16L19.52 3.35c-.5-.31-1.15-.31-1.65 0L6.23 10.62l6.65 4.16c1.26-1.87 3.4-3.1 5.81-3.1 2.41 0 4.55 1.23 5.81 3.1zM25.7 18.69c0 3.33-2.34 6.1-5.45 6.82v8.07l11.73-7.34c.45-.28.73-.78.73-1.32V13.32l-7.1 4.44c.05.31.09.61.09.93zM11.68 18.69c0-.31.05-.62.09-.93l-7.1-4.44v11.6c0 .53.28 1.04.73 1.32l11.73 7.34v-8.07c-3.12-.72-5.45-3.49-5.45-6.82z" fill="#D5D5D5"/></svg>`,
+  },
+  {
+    label: ['TARGET CLIENT', 'PROFILE'],
+    target: 'clients',
+    icon: `<svg width="38" height="38" viewBox="0 0 38 38" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.46 10.9c0-1.65.66-3.24 1.83-4.41A6.23 6.23 0 0118.69 4.67c1.65 0 3.24.66 4.41 1.83a6.23 6.23 0 011.83 4.41c0 1.65-.66 3.24-1.83 4.41a6.23 6.23 0 01-4.41 1.83 6.23 6.23 0 01-4.41-1.83 6.23 6.23 0 01-1.83-4.41zm0 9.35c-2.07 0-4.05.82-5.51 2.28a7.79 7.79 0 00-2.28 5.51c0 1.24.49 2.43 1.37 3.3a4.67 4.67 0 003.3 1.37h18.69a4.67 4.67 0 003.3-1.37 4.67 4.67 0 001.37-3.3c0-2.07-.82-4.05-2.28-5.51a7.79 7.79 0 00-5.51-2.28H12.46z" fill="#D5D5D5"/></svg>`,
+  },
+  {
+    label: ['ESTABLISH', 'YOUR FUTURE'],
+    target: 'cta',
+    icon: `<svg width="35" height="35" viewBox="0 0 35 35" fill="none"><path d="M9.35 17.13c.95-6.46 7.78-14.8 7.78-14.8s6.84 8.34 7.79 14.8c.85 5.79-2.34 15.58-2.34 15.58H11.68s-3.19-9.79-2.33-15.58z" stroke="#D5D5D5" stroke-width="3.12" stroke-linecap="round" stroke-linejoin="round"/><path d="M12.46 9.35h9.34M10.12 14.02h14.02M9.35 18.69h15.57M10.12 23.36h14.02M10.9 28.04h12.46" stroke="#D5D5D5" stroke-width="3.12" stroke-linecap="round"/><path d="M1.56 32.71h31.15" stroke="#D5D5D5" stroke-width="3.12" stroke-linecap="round" stroke-linejoin="round"/><path d="M17.13 1.56v1.56" stroke="#D5D5D5" stroke-width="3.12" stroke-linecap="round"/></svg>`,
+  },
+];
+---
+
+<section class="section" id="section-hero" data-section="hero" data-video="/videos/Secuencia 001.mp4">
+  <video class="section__video" muted playsinline preload="auto"></video>
+
+  <div class="hero__glass-top"></div>
+  <div class="hero__glass-bottom"></div>
+  <div class="hero__vignette-left"></div>
+
+  <!-- Left text block -->
+  <div class="hero__left">
+    <div class="hero__card">
+      <p class="hero__pretitle anim-fade-left">Looking to migrate or invest in the</p>
+      <div class="hero__title">
+        <span class="hero__title-line1 anim-fade-left">United Arab</span>
+        <span class="hero__title-line2 anim-fade-left">Emirates?</span>
+      </div>
+      <p class="hero__subtitle anim-fade-left">
+        Discover the world's most stable, secure, and globally connected environment to build your personal and corporate future.
+      </p>
+      <p class="hero__body anim-fade-left">
+        The UAE offers strong legal stability, tax advantages, and global access. Nexaru Global Services provides expert support for individuals and businesses to confidently establish their legal presence.
+      </p>
+    </div>
+  </div>
+
+  <!-- Right side icons — perfect circular arc using calc(vw - vh) for responsive scaling -->
+  <div class="hero__right">
+    {sideIcons.map((item, i) => {
+      // Perfect circle: center=26vw from right, 50vh. Radius=32vh
+      // 6 points at angles: -70°, -42°, -14°, +14°, +42°, +70°
+      // Arc: center from right edge, radius in vh
+      // min() ensures labels always fit: at 1920px uses 26vw (499px),
+      // at narrower screens caps center so middle icons stay ≥200px from right edge
+      const arcs = [
+        { right: 'calc(min(30vw, 100vw - 480px) - 10.9vh)', top: '19.9vh' },   // -70° Strategic
+        { right: 'calc(min(30vw, 100vw - 480px) - 23.8vh)', top: '28.6vh' },   // -42° Key Advantages
+        { right: 'calc(min(30vw, 100vw - 480px) - 31.0vh)', top: '42.3vh' },   // -14° NGS Provides
+        { right: 'calc(min(30vw, 100vw - 480px) - 31.0vh)', top: '57.7vh' },   // +14° Core Service
+        { right: 'calc(min(30vw, 100vw - 480px) - 23.8vh)', top: '71.4vh' },   // +42° Target Client
+        { right: 'calc(min(30vw, 100vw - 480px) - 10.9vh)', top: '80.1vh' },   // +70° Establish
+      ];
+      const pos = arcs[i];
+      return (
+        <button class="hero__icon anim-fade-right" data-target={item.target} style={`--delay: ${i * 0.1}s; right: ${pos.right}; top: ${pos.top}`}>
+          <div class="hero__icon-circle">
+            <Fragment set:html={item.icon} />
+          </div>
+          <div class="hero__icon-label">
+            {item.label.map(line => <span>{line}</span>)}
+          </div>
+        </button>
+      );
+    })}
+  </div>
+
+  <!-- CTA bottom center -->
+  <div class="hero__cta anim-fade-up">
+    <button class="hero__cta-btn">
+      Start Your Migration or Investment Assessment
+    </button>
+  </div>
+</section>
+
+<style>
+  /* Rectangle 7 — glass top (Figma 848:275) */
+  .hero__glass-top {
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 18.7%;    /* 202/1080 — scales with section */
+    background: linear-gradient(
+      to bottom,
+      rgba(4, 15, 19, 0.7) 0%,
+      rgba(4, 15, 19, 0.35) 58.65%,
+      rgba(4, 15, 19, 0) 93.75%
+    );
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 2;
+    pointer-events: none;
+  }
+
+  /* Rectangle 6 — glass bottom (Figma 848:274) */
+  .hero__glass-bottom {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 23.8%;    /* 257/1080 */
+    background: linear-gradient(
+      to top,
+      rgba(4, 15, 19, 0.7) 0%,
+      rgba(4, 15, 19, 0) 100%
+    );
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 2;
+    pointer-events: none;
+  }
+
+  /* Left vignette — darkens globe behind text area */
+  .hero__vignette-left {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    background: radial-gradient(
+      ellipse 70% 80% at 25% 50%,
+      rgba(2, 8, 12, 0.6) 0%,
+      rgba(2, 8, 12, 0.3) 40%,
+      transparent 70%
+    );
+  }
+
+  /* ---- Left text block (Figma: 1920×1080) ---- */
+  .hero__left {
+    position: absolute;
+    left: 5.47%;      /* 105/1920 */
+    top: 22%;
+    z-index: 3;
+    max-width: 546px;
+  }
+
+  .hero__card {
+    background: rgba(4, 15, 19, 0.72);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    padding: 36px 40px;
+  }
+
+  .hero__pretitle {
+    font-weight: var(--f-weight-semibold);
+    font-size: 28.12px;
+    color: #e3e3e3;
+    line-height: 1.2;
+    margin-bottom: 0;
+  }
+
+  .hero__title {
+    display: flex;
+    flex-direction: column;
+    margin-top: 4px;
+    margin-bottom: 24px;
+  }
+
+  .hero__title-line1 {
+    font-weight: var(--f-weight-extrabold);
+    font-size: 68.54px;
+    color: #e3e3e3;
+    line-height: 84.36px;
+    text-transform: uppercase;
+  }
+
+  .hero__title-line2 {
+    font-weight: var(--f-weight-black);
+    font-size: 84.36px;
+    color: #e3e3e3;
+    line-height: 84.36px;
+    text-transform: uppercase;
+  }
+
+  .hero__subtitle {
+    font-weight: var(--f-weight-regular);
+    font-size: 26.36px;
+    color: #e3e3e3;
+    line-height: 1.25;
+    max-width: 479px;
+    margin-bottom: 24px;
+  }
+
+  .hero__body {
+    font-weight: var(--f-weight-regular);
+    font-size: 17.58px;
+    color: #e3e3e3;
+    line-height: 1.35;
+    max-width: 546px;
+  }
+
+  /* ---- Right icons — absolute arc around globe ---- */
+  .hero__right {
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+    pointer-events: none;
+  }
+
+  .hero__icon {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+    pointer-events: auto;
+    /* Width = only the circle, label is absolutely positioned outside */
+    width: clamp(50px, 3.9vw, 75px);
+    height: clamp(50px, 3.9vw, 75px);
+    transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                filter 0.35s ease;
+  }
+
+  .hero__icon:hover {
+    transform: translateX(-10px) scale(1.06);
+    filter: brightness(1.2);
+  }
+
+  .hero__icon:hover .hero__icon-label {
+    color: #ffffff;
+    text-shadow: 0 0 12px rgba(180, 220, 240, 0.3);
+  }
+
+  .hero__icon-circle {
+    width: clamp(50px, 3.9vw, 75px);
+    height: clamp(50px, 3.9vw, 75px);
+    border-radius: 50%;
+    border: 2.24px solid #d5d5d5;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: border-color 0.35s ease, background 0.35s ease,
+                box-shadow 0.35s ease, transform 0.35s ease;
+  }
+
+  .hero__icon-circle :global(svg) {
+    width: clamp(24px, 1.95vw, 37px);
+    height: clamp(24px, 1.95vw, 37px);
+  }
+
+  .hero__icon:hover .hero__icon-circle {
+    border-color: #ffffff;
+    background: rgba(20, 60, 80, 0.35);
+    box-shadow: 0 0 30px rgba(80, 180, 220, 0.3);
+    transform: scale(1.1);
+  }
+
+  .hero__icon-label {
+    position: absolute;
+    left: calc(100% + 14px);
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    font-family: var(--f-primary);
+    font-weight: var(--f-weight-semibold);
+    font-size: clamp(12px, 0.93vw, 18px);
+    color: #ffffff;
+    line-height: 1.2;
+    text-align: left;
+    white-space: nowrap;
+    text-shadow:
+      0 0 8px rgba(0, 0, 0, 0.9),
+      0 0 20px rgba(0, 0, 0, 0.7),
+      0 1px 3px rgba(0, 0, 0, 0.8);
+    transition: color 0.35s ease, text-shadow 0.35s ease;
+  }
+
+  /* ---- CTA button — always centered ---- */
+  .hero__cta {
+    position: absolute;
+    bottom: 5%;
+    left: 0;
+    right: 0;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+  }
+
+  .hero__cta-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 14px;
+    border: none;
+    padding: 24px 40px;
+    font-family: var(--f-primary);
+    font-weight: var(--f-weight-black);
+    font-size: clamp(13px, 1.04vw, 16px);
+    color: white;
+    text-align: center;
+    white-space: nowrap;
+    box-shadow: 0 0 70px rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .hero__cta-btn:hover {
+    transform: scale(1.04);
+    box-shadow: 0 0 100px rgba(255, 255, 255, 0.65);
+  }
+
+  /* ---- Responsive ---- */
+
+  /* Large desktop: 1601-1920+ — base styles above handle this */
+
+  /* Medium desktop: 1280-1600 */
+  @media (max-width: 1600px) {
+    .hero__left {
+      left: calc(105 / 1920 * 100vw);
+      top: 22%;
+      max-width: 38vw;
+    }
+    .hero__pretitle { font-size: clamp(18px, 1.46vw, 28.12px); }
+    .hero__title-line1 { font-size: clamp(38px, 3.57vw, 68.54px); line-height: 1.08; }
+    .hero__title-line2 { font-size: clamp(46px, 4.39vw, 84.36px); line-height: 1.0; }
+    .hero__subtitle { font-size: clamp(16px, 1.37vw, 26.36px); max-width: 36vw; }
+    .hero__body { font-size: clamp(12px, 0.916vw, 17.58px); max-width: 36vw; }
+    .hero__icon-label { font-size: clamp(11px, 0.82vw, 16px); }
+  }
+
+  /* Small desktop: 1024-1280 */
+  @media (max-width: 1280px) {
+    .hero__left {
+      left: 4%;
+      top: 22%;
+      max-width: 42vw;
+    }
+    .hero__pretitle { font-size: clamp(16px, 1.4vw, 24px); }
+    .hero__title-line1 { font-size: clamp(32px, 3.2vw, 54px); line-height: 1.08; }
+    .hero__title-line2 { font-size: clamp(38px, 3.9vw, 66px); line-height: 1.0; }
+    .hero__subtitle { font-size: clamp(14px, 1.3vw, 22px); max-width: 38vw; }
+    .hero__body { font-size: clamp(11px, 0.88vw, 15px); max-width: 38vw; }
+    .hero__icon-label { font-size: clamp(10px, 0.75vw, 14px); }
+    .hero__icon-circle { width: clamp(44px, 3.5vw, 60px); height: clamp(44px, 3.5vw, 60px); }
+    .hero__icon { width: clamp(44px, 3.5vw, 60px); height: clamp(44px, 3.5vw, 60px); }
+  }
+
+  /* Tablet */
+  @media (max-width: 1024px) {
+    .hero__left { left: 5%; top: 22%; max-width: 55vw; }
+    .hero__icon-label { display: none; }
+    .hero__icon-circle { width: 50px; height: 50px; }
+    .hero__icon { width: 50px; height: 50px; }
+    .hero__icon-circle :global(svg) { width: 24px; height: 24px; }
+  }
+
+  /* Mobile */
+  @media (max-width: 768px) {
+    .hero__left { left: 24px; right: 24px; top: 18%; max-width: calc(100vw - 48px); }
+    .hero__pretitle { font-size: 16px; }
+    .hero__title-line1 { font-size: 32px; line-height: 1.08; }
+    .hero__title-line2 { font-size: 40px; line-height: 1.0; }
+    .hero__subtitle { font-size: 15px; max-width: 100%; }
+    .hero__body { font-size: 12px; max-width: 100%; }
+    .hero__icon { right: 8px !important; width: 42px; height: 42px; }
+    .hero__icon-circle { width: 42px; height: 42px; }
+    .hero__icon-circle :global(svg) { width: 20px; height: 20px; }
+    .hero__cta { bottom: 30px; }
+    .hero__cta-btn { font-size: 13px; padding: 18px 20px; white-space: normal; }
+  }
+</style>

@@ -1,0 +1,75 @@
+---
+const advantages = [
+  { title: 'Global Market Access', desc: 'Operate from a jurisdiction connecting Europe, Asia, and Africa within hours.', icon: 'G' },
+  { title: 'Tax Efficiency', desc: 'Access competitive corporate structures and zero personal income tax.', icon: 'T' },
+  { title: 'Legal and Political Stability', desc: 'Benefit from a secure and internationally recognized legal framework.', icon: 'L' },
+  { title: 'Operational Freedom', desc: 'Establish and manage companies with flexible ownership structures.', icon: 'O' },
+  { title: 'Financial Infrastructure', desc: "Operate within one of the world's most advanced banking environments.", icon: 'F' },
+  { title: 'Personal and Family Security', desc: 'Live and operate in one of the safest countries globally.', icon: 'P' },
+];
+---
+
+<section class="section" id="section-advantages" data-section="advantages" data-video="/videos/Secuencia 005.mp4">
+  <video class="section__video" muted playsinline preload="none"></video>
+
+  <div class="gradient-left"></div>
+  <div class="gradient-top"></div>
+  <div class="gradient-bottom"></div>
+
+  <div class="ka__content section__content">
+    <div class="ka__header">
+      <h2 class="text-headline anim-fade-left" style="color:#e6e6e6">
+        Why global founders, investors,
+      </h2>
+      <p class="text-subheadline anim-fade-left" style="color:#e6e6e6">
+        and professionals choose the UAE
+      </p>
+    </div>
+
+    <div class="ka__grid">
+      {advantages.map((item, i) => (
+        <div class="advantage-card anim-scale-in" style={`--delay: ${i * 0.08}s`}>
+          <div class="advantage-card__icon">
+            <div class="section-icon__placeholder" style="font-size:1.6rem">{item.icon}</div>
+          </div>
+          <div>
+            <p class="advantage-card__title">{item.title}</p>
+            <p class="advantage-card__desc">{item.desc}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <div class="ka__cta anim-fade-up">
+      <button class="cta-btn--lg cta-btn">
+        Start Your UAE Establishment
+      </button>
+    </div>
+  </div>
+</section>
+
+<style>
+  .ka__content {
+    padding: 120px 7% 100px;
+    gap: 30px;
+  }
+
+  .ka__header {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .ka__grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 19px 67px;
+    max-width: 970px;
+  }
+
+  .ka__cta {
+    margin-top: auto;
+    align-self: flex-start;
+    margin-left: 5%;
+  }
+</style>

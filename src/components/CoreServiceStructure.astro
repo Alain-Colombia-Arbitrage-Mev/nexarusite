@@ -1,0 +1,71 @@
+---
+const coreServices = [
+  { title: 'Corporate Establishment', desc: 'Structured formation of UAE companies aligned with your operational and strategic objectives', icon: 'C' },
+  { title: 'Residency and Legal Alignment', desc: 'Professional coordination of residency pathways and legal presence.', icon: 'R' },
+  { title: 'Investor and Founder Migration', desc: 'Support for entrepreneurs, investors, and founders establishing operational base in UAE.', icon: 'I' },
+  { title: 'Institutional and Regulatory Coordination', desc: 'Direct management of regulatory processes and compliance requirements.', icon: 'D' },
+];
+---
+
+<section class="section" id="section-services" data-section="services" data-video="/videos/Secuencia 007.mp4">
+  <video class="section__video" muted playsinline preload="none"></video>
+
+  <div class="gradient-left"></div>
+  <div class="gradient-top"></div>
+  <div class="gradient-bottom"></div>
+
+  <div class="cs__content section__content">
+    <div class="cs__header">
+      <h2 class="text-headline anim-fade-left" style="color:#e4e4e4">
+        Complete alignment
+      </h2>
+      <p class="text-subheadline anim-fade-left" style="color:#e4e4e4;font-style:italic">
+        across your personal and corporate presence
+      </p>
+    </div>
+
+    <div class="cs__grid">
+      {coreServices.map((item, i) => (
+        <div class="core-card anim-scale-in" style={`--delay: ${i * 0.1}s`}>
+          <div class="core-card__icon">
+            <div class="section-icon__placeholder" style="font-size:2.4rem;width:77px;height:77px;display:flex;align-items:center;justify-content:center">{item.icon}</div>
+          </div>
+          <p class="core-card__title">{item.title}</p>
+          <p class="core-card__desc">{item.desc}</p>
+        </div>
+      ))}
+    </div>
+
+    <div class="cs__cta anim-fade-up">
+      <button class="cta-btn--lg cta-btn" style="align-self:flex-end">
+        Begin Your Process
+      </button>
+    </div>
+  </div>
+</section>
+
+<style>
+  .cs__content {
+    padding: 120px 8% 100px;
+    gap: 20px;
+  }
+
+  .cs__header {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .cs__grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    max-width: 820px;
+  }
+
+  .cs__cta {
+    position: absolute;
+    bottom: 100px;
+    right: 10%;
+  }
+</style>

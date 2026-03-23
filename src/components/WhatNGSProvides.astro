@@ -1,0 +1,69 @@
+---
+const services = [
+  { text: 'Nexaru Global Services provides structured support...', icon: 'H' },
+  { text: 'We coordinate every stage of the process...', icon: 'J' },
+  { text: 'Our role extends beyond processing...', icon: 'G' },
+];
+---
+
+<section class="section" id="section-provides" data-section="provides" data-video="/videos/Secuencia 006.mp4">
+  <video class="section__video" muted playsinline preload="none"></video>
+
+  <div class="gradient-top" style="height:558px;background:linear-gradient(to bottom, var(--c-bg-alt), rgba(8,29,37,0.5) 38%, transparent)"></div>
+  <div class="gradient-bottom"></div>
+
+  <div class="wp__content section__content">
+    <div class="wp__header">
+      <h2 class="text-headline anim-fade-up" style="color:#e4e4e4;text-align:center">
+        Institutional support
+      </h2>
+      <p class="text-subheadline anim-fade-up" style="color:#e4e4e4;text-align:center">
+        for your migration and establishment
+      </p>
+    </div>
+
+    <div class="wp__cards">
+      {services.map((item, i) => (
+        <div class="service-card anim-scale-in" style={`--delay: ${i * 0.1}s`}>
+          <div class="service-card__icon">
+            <div class="section-icon__placeholder" style="font-size:3rem;width:100px;height:100px;display:flex;align-items:center;justify-content:center">{item.icon}</div>
+          </div>
+          <p class="service-card__text">{item.text}</p>
+        </div>
+      ))}
+    </div>
+
+    <div class="wp__cta anim-fade-up">
+      <button class="cta-btn--lg cta-btn">
+        Request a Private Consultation
+      </button>
+    </div>
+  </div>
+</section>
+
+<style>
+  .wp__content {
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    padding: 120px 6%;
+  }
+
+  .wp__header {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
+
+  .wp__cards {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .wp__cta {
+    margin-top: 20px;
+  }
+</style>
