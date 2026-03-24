@@ -1,11 +1,11 @@
 ---
 const advantages = [
-  { title: 'Global Market Access', desc: 'Operate from a jurisdiction connecting Europe, Asia, and Africa within hours.', icon: 'G' },
-  { title: 'Tax Efficiency', desc: 'Access competitive corporate structures and zero personal income tax.', icon: 'T' },
-  { title: 'Legal and Political Stability', desc: 'Benefit from a secure and internationally recognized legal framework.', icon: 'L' },
-  { title: 'Operational Freedom', desc: 'Establish and manage companies with flexible ownership structures.', icon: 'O' },
-  { title: 'Financial Infrastructure', desc: "Operate within one of the world's most advanced banking environments.", icon: 'F' },
-  { title: 'Personal and Family Security', desc: 'Live and operate in one of the safest countries globally.', icon: 'P' },
+  { title: 'Global Market Access', desc: 'Operate from a jurisdiction connecting Europe, Asia, and Africa within hours.', icon: '/icons/world.png' },
+  { title: 'Tax Efficiency', desc: 'Access competitive corporate structures and zero personal income tax.', icon: '/icons/receipt-tax.png' },
+  { title: 'Legal and Political Stability', desc: 'Benefit from a secure and internationally recognized legal framework.', icon: '/icons/justice-hammer-ka.png' },
+  { title: 'Operational Freedom', desc: 'Establish and manage companies with flexible ownership structures.', icon: '/icons/connect.png' },
+  { title: 'Financial Infrastructure', desc: "Operate within one of the world's most advanced banking environments.", icon: '/icons/bank.png' },
+  { title: 'Personal and Family Security', desc: 'Live and operate in one of the safest countries globally.', icon: '/icons/security.png' },
 ];
 ---
 
@@ -30,7 +30,7 @@ const advantages = [
       {advantages.map((item, i) => (
         <div class="ka__card anim-scale-in" style={`--delay: ${i * 0.08}s`}>
           <div class="ka__card-icon">
-            <div class="ka__card-icon-placeholder">{item.icon}</div>
+            <img src={item.icon} alt="" class="ka__card-icon-img" />
           </div>
           <div class="ka__card-text">
             <p class="ka__card-title">{item.title}</p>
@@ -172,10 +172,10 @@ const advantages = [
     transition: border-color 0.4s ease, box-shadow 0.4s ease;
   }
 
-  .ka__card-icon-placeholder {
-    font-size: 1.3vw;
-    color: #d5d5d5;
-    font-weight: var(--f-weight-bold);
+  .ka__card-icon-img {
+    width: 50%;
+    height: 50%;
+    object-fit: contain;
   }
 
   .ka__card-text {
