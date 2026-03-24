@@ -47,30 +47,30 @@ const clients = [
   </div>
 </section>
 
-<style is:global>
+<style>
   /* Remove backdrop-filter flickering */
-  #section-clients .gradient-top,
-  #section-clients .gradient-bottom {
+  :global(#section-clients) .gradient-top,
+  :global(#section-clients) .gradient-bottom {
     backdrop-filter: none;
     -webkit-backdrop-filter: none;
   }
 
   /* Right blur overlay — from Pencil: 1140px wide, right-aligned */
-  #section-clients .tcp-overlay {
+  :global(#section-clients) .tcp-overlay {
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
-    width: 60%;
-    background: linear-gradient(to left, transparent, rgba(8, 29, 37, 0.2) 38%, rgba(8, 29, 37, 0.4));
-    backdrop-filter: blur(33px);
-    -webkit-backdrop-filter: blur(33px);
+    width: 55%;
+    background: linear-gradient(to left, transparent 5%, rgba(8, 29, 37, 0.08) 35%, rgba(8, 29, 37, 0.18));
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
     z-index: 1;
     pointer-events: none;
   }
 
   /* Layout — right-aligned, vertically centered */
-  #section-clients .tcp-layout {
+  :global(#section-clients) .tcp-layout {
     align-items: flex-end;
     justify-content: center;
     gap: 2vh;
@@ -78,7 +78,7 @@ const clients = [
   }
 
   /* Text wrapper — right-aligned */
-  #section-clients .tcp-text {
+  :global(#section-clients) .tcp-text {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -88,39 +88,39 @@ const clients = [
   }
 
   /* Title */
-  #section-clients .tcp-title {
+  :global(#section-clients) .tcp-title {
     display: flex;
     flex-direction: column;
     gap: 4px;
     color: #dfdfdf;
   }
 
-  #section-clients .tcp-headline {
+  :global(#section-clients) .tcp-headline {
     font-family: var(--f-primary);
     font-weight: var(--f-weight-extrabold);
-    font-size: clamp(22px, 3.646vw, 70px);
+    font-size: clamp(22px, 5vh, 56px);
     text-transform: uppercase;
-    line-height: 1.02;
+    line-height: 1.05;
   }
 
-  #section-clients .tcp-subheadline {
+  :global(#section-clients) .tcp-subheadline {
     font-family: var(--f-primary);
     font-weight: var(--f-weight-regular);
-    font-size: clamp(16px, 2.083vw, 40px);
+    font-size: clamp(16px, 3vh, 32px);
     line-height: 1.2;
   }
 
   /* Description — 26px at 1920 */
-  #section-clients .tcp-desc {
+  :global(#section-clients) .tcp-desc {
     font-family: var(--f-primary);
-    font-size: clamp(14px, 1.35vw, 26px);
+    font-size: clamp(13px, 2vh, 20px);
     color: #dfdfdf;
     line-height: 1.4;
     max-width: 41.25vw;              /* 792/1920 */
   }
 
   /* Pills grid — 2 columns, 3 rows */
-  #section-clients .tcp-pills {
+  :global(#section-clients) .tcp-pills {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: clamp(8px, 0.63vw, 12px);
@@ -129,7 +129,7 @@ const clients = [
   }
 
   /* Pill — 451×70 at 1920 */
-  #section-clients .tcp-pill {
+  :global(#section-clients) .tcp-pill {
     display: flex;
     align-items: center;
     gap: clamp(8px, 0.69vw, 13px);
@@ -146,7 +146,7 @@ const clients = [
     cursor: pointer;
   }
 
-  #section-clients .tcp-pill:hover {
+  :global(#section-clients) .tcp-pill:hover {
     transform: translateY(-3px) scale(1.01);
     background: rgba(0, 0, 0, 0.55);
     border-color: rgba(255, 255, 255, 0.15);
@@ -156,7 +156,7 @@ const clients = [
   }
 
   /* Pill icon — 44px at 1920 */
-  #section-clients .tcp-pill-icon {
+  :global(#section-clients) .tcp-pill-icon {
     width: clamp(30px, 2.29vw, 44px);
     height: clamp(30px, 2.29vw, 44px);
     flex-shrink: 0;
@@ -165,14 +165,14 @@ const clients = [
     justify-content: center;
   }
 
-  #section-clients .tcp-pill-icon-img {
+  :global(#section-clients) .tcp-pill-icon-img {
     width: 100%;
     height: 100%;
     object-fit: contain;
   }
 
   /* Pill text — 14px semibold */
-  #section-clients .tcp-pill-text {
+  :global(#section-clients) .tcp-pill-text {
     font-family: var(--f-primary);
     font-weight: var(--f-weight-semibold);
     font-size: clamp(11px, 0.73vw, 14px);
@@ -181,11 +181,11 @@ const clients = [
   }
 
   /* CTA */
-  #section-clients .tcp-cta {
+  :global(#section-clients) .tcp-cta {
     margin-top: 1vh;
   }
 
-  #section-clients .tcp-cta .cta-btn--lg.cta-btn {
+  :global(#section-clients) .tcp-cta .cta-btn--lg.cta-btn {
     padding: 18px 50px;
     font-size: 1rem;
     border-radius: 16px;
@@ -194,79 +194,79 @@ const clients = [
   /* ---- Responsive ---- */
 
   @media (max-width: 1440px) {
-    #section-clients .tcp-text { max-width: 60vw; }
-    #section-clients .tcp-pills { max-width: 55vw; }
+    :global(#section-clients) .tcp-text { max-width: 60vw; }
+    :global(#section-clients) .tcp-pills { max-width: 55vw; }
   }
 
   @media (max-width: 1280px) {
-    #section-clients .tcp-text { max-width: 65vw; }
-    #section-clients .tcp-pills { max-width: 60vw; }
-    #section-clients .tcp-pill-text { white-space: normal; }
-    #section-clients .tcp-cta .cta-btn--lg.cta-btn {
+    :global(#section-clients) .tcp-text { max-width: 65vw; }
+    :global(#section-clients) .tcp-pills { max-width: 60vw; }
+    :global(#section-clients) .tcp-pill-text { white-space: normal; }
+    :global(#section-clients) .tcp-cta .cta-btn--lg.cta-btn {
       padding: 16px 40px;
       font-size: 0.9rem;
     }
   }
 
   @media (max-width: 1024px) {
-    #section-clients .tcp-layout {
+    :global(#section-clients) .tcp-layout {
       align-items: center;
       padding: 0 5%;
     }
-    #section-clients .tcp-text {
+    :global(#section-clients) .tcp-text {
       align-items: center;
       text-align: center;
       max-width: 90vw;
     }
-    #section-clients .tcp-desc { max-width: 80vw; }
-    #section-clients .tcp-pills { max-width: 85vw; }
-    #section-clients .tcp-pill-text { white-space: normal; font-size: 13px; }
-    #section-clients .tcp-cta .cta-btn--lg.cta-btn {
+    :global(#section-clients) .tcp-desc { max-width: 80vw; }
+    :global(#section-clients) .tcp-pills { max-width: 85vw; }
+    :global(#section-clients) .tcp-pill-text { white-space: normal; font-size: 13px; }
+    :global(#section-clients) .tcp-cta .cta-btn--lg.cta-btn {
       padding: 14px 36px;
       font-size: 0.85rem;
     }
   }
 
   @media (max-width: 768px) {
-    #section-clients .tcp-overlay {
+    :global(#section-clients) .tcp-overlay {
       width: 100%;
       background: rgba(8, 29, 37, 0.3);
     }
-    #section-clients .tcp-layout {
+    :global(#section-clients) .tcp-layout {
       padding: 0 16px;
       gap: 12px;
     }
-    #section-clients .tcp-text {
+    :global(#section-clients) .tcp-text {
       align-items: center;
       text-align: center;
       max-width: 100%;
       gap: 12px;
     }
-    #section-clients .tcp-headline { font-size: 24px; }
-    #section-clients .tcp-subheadline { font-size: 16px; }
-    #section-clients .tcp-desc { font-size: 14px; max-width: 100%; }
-    #section-clients .tcp-pills {
+    :global(#section-clients) .tcp-headline { font-size: 24px; }
+    :global(#section-clients) .tcp-subheadline { font-size: 16px; }
+    :global(#section-clients) .tcp-desc { font-size: 14px; max-width: 100%; }
+    :global(#section-clients) .tcp-pills {
       grid-template-columns: 1fr;
       max-width: 100%;
     }
-    #section-clients .tcp-pill { padding: 12px 14px; }
-    #section-clients .tcp-pill-icon { width: 32px; height: 32px; }
-    #section-clients .tcp-pill-text { font-size: 13px; }
-    #section-clients .tcp-cta .cta-btn--lg.cta-btn {
+    :global(#section-clients) .tcp-pill { padding: 12px 14px; }
+    :global(#section-clients) .tcp-pill-icon { width: 32px; height: 32px; }
+    :global(#section-clients) .tcp-pill-text { font-size: 13px; }
+    :global(#section-clients) .tcp-cta .cta-btn--lg.cta-btn {
       padding: 16px 32px;
       font-size: 14px;
     }
   }
 
   @media (max-width: 480px) {
-    #section-clients .tcp-layout { padding: 0 12px; gap: 10px; }
-    #section-clients .tcp-headline { font-size: 20px; }
-    #section-clients .tcp-subheadline { font-size: 14px; }
-    #section-clients .tcp-desc { font-size: 13px; }
-    #section-clients .tcp-pill { padding: 10px 12px; gap: 8px; }
-    #section-clients .tcp-pill-icon { width: 28px; height: 28px; }
-    #section-clients .tcp-pill-text { font-size: 12px; }
-    #section-clients .tcp-cta .cta-btn--lg.cta-btn {
+    :global(#section-clients) .tcp-layout { padding: 0 12px; gap: 10px; }
+    :global(#section-clients) .tcp-headline { font-size: 20px; }
+    :global(#section-clients) .tcp-subheadline { font-size: 14px; }
+    :global(#section-clients) .tcp-desc { font-size: 13px; }
+    :global(#section-clients) .tcp-pill { padding: 10px 12px; gap: 8px; }
+    :global(#section-clients) .tcp-pill-icon { width: 28px; height: 28px; }
+    :global(#section-clients) .tcp-pill-text { font-size: 12px; }
+    :global(#section-clients) .tcp-cta .cta-btn--lg.cta-btn {
       padding: 14px 24px;
       font-size: 13px;
     }
