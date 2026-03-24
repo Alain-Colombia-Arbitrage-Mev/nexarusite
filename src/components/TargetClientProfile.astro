@@ -1,11 +1,11 @@
 ---
 const clients = [
-  { text: 'Entrepreneurs establishing new companies', icon: 'N' },
-  { text: 'International companies expanding into UAE', icon: 'B' },
-  { text: 'Founders relocating operational headquarters', icon: 'T' },
-  { text: 'Professionals establishing independent presence', icon: 'P' },
-  { text: 'Investors requiring residency alignment', icon: 'I' },
-  { text: 'Families relocating with structured legal support', icon: 'F' },
+  { text: 'Entrepreneurs establishing new companies', icon: '/icons/newbox-entrepreneur.png' },
+  { text: 'International companies expanding into UAE', icon: '/icons/burj-international.png' },
+  { text: 'Founders relocating operational headquarters', icon: '/icons/travel-founders.png' },
+  { text: 'Professionals establishing independent presence', icon: '/icons/professional-hex.png' },
+  { text: 'Investors requiring residency alignment', icon: '/icons/team-investors.png' },
+  { text: 'Families relocating with structured legal support', icon: '/icons/family-restroom.png' },
 ];
 ---
 
@@ -14,34 +14,32 @@ const clients = [
 
   <div class="gradient-top"></div>
   <div class="gradient-bottom"></div>
+  <div class="tcp-overlay"></div>
 
-  <!-- Right blur overlay -->
-  <div class="tcp__overlay"></div>
-
-  <div class="tcp__content section__content">
-    <div class="tcp__text">
-      <h2 class="tcp__title anim-fade-right">
-        <span class="text-headline">Designed for individuals and organizations</span>
-        <span class="text-subheadline">building long-term presence</span>
+  <div class="section__content tcp-layout">
+    <div class="tcp-text">
+      <h2 class="tcp-title anim-fade-right">
+        <span class="tcp-headline">Designed for individuals and organizations</span>
+        <span class="tcp-subheadline">building long-term presence</span>
       </h2>
 
-      <p class="tcp__desc anim-fade-right">
+      <p class="tcp-desc anim-fade-right">
         Our services are structured for clients seeking clarity, legal certainty, and institutional-level support during their transition into the UAE.
       </p>
 
-      <div class="tcp__pills">
+      <div class="tcp-pills">
         {clients.map((item, i) => (
-          <div class="client-pill anim-scale-in" style={`--delay: ${i * 0.08}s`}>
-            <div class="client-pill__icon">
-              <div class="section-icon__placeholder" style="font-size:1.4rem;width:44px;height:44px;display:flex;align-items:center;justify-content:center">{item.icon}</div>
+          <div class="tcp-pill anim-scale-in" style={`--delay: ${i * 0.08}s`}>
+            <div class="tcp-pill-icon">
+              <img src={item.icon} alt="" class="tcp-pill-icon-img" />
             </div>
-            <p class="client-pill__text">{item.text}</p>
+            <p class="tcp-pill-text">{item.text}</p>
           </div>
         ))}
       </div>
 
-      <div class="tcp__cta anim-fade-up">
-        <button class="cta-btn--lg cta-btn">
+      <div class="tcp-cta anim-fade-up">
+        <button class="cta-btn cta-btn--lg">
           Start Your Assessment
         </button>
       </div>
@@ -49,8 +47,16 @@ const clients = [
   </div>
 </section>
 
-<style>
-  .tcp__overlay {
+<style is:global>
+  /* Remove backdrop-filter flickering */
+  #section-clients .gradient-top,
+  #section-clients .gradient-bottom {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+
+  /* Right blur overlay — from Pencil: 1140px wide, right-aligned */
+  #section-clients .tcp-overlay {
     position: absolute;
     top: 0;
     right: 0;
@@ -63,43 +69,206 @@ const clients = [
     pointer-events: none;
   }
 
-  .tcp__content {
+  /* Layout — right-aligned, vertically centered */
+  #section-clients .tcp-layout {
     align-items: flex-end;
-    padding: 120px 4% 100px;
+    justify-content: center;
+    gap: 2vh;
+    padding: 0 4% 0 0;
   }
 
-  .tcp__text {
+  /* Text wrapper — right-aligned */
+  #section-clients .tcp-text {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    gap: 20px;
-    max-width: 1000px;
+    gap: 2vh;
+    max-width: 55vw;
     text-align: right;
   }
 
-  .tcp__title {
+  /* Title */
+  #section-clients .tcp-title {
     display: flex;
     flex-direction: column;
     gap: 4px;
     color: #dfdfdf;
   }
 
-  .tcp__desc {
-    font-size: 1.6rem;
+  #section-clients .tcp-headline {
+    font-family: var(--f-primary);
+    font-weight: var(--f-weight-extrabold);
+    font-size: clamp(22px, 3.646vw, 70px);
+    text-transform: uppercase;
+    line-height: 1.02;
+  }
+
+  #section-clients .tcp-subheadline {
+    font-family: var(--f-primary);
+    font-weight: var(--f-weight-regular);
+    font-size: clamp(16px, 2.083vw, 40px);
+    line-height: 1.2;
+  }
+
+  /* Description — 26px at 1920 */
+  #section-clients .tcp-desc {
+    font-family: var(--f-primary);
+    font-size: clamp(14px, 1.35vw, 26px);
     color: #dfdfdf;
     line-height: 1.4;
-    max-width: 790px;
+    max-width: 41.25vw;              /* 792/1920 */
   }
 
-  .tcp__pills {
+  /* Pills grid — 2 columns, 3 rows */
+  #section-clients .tcp-pills {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 12px;
+    gap: clamp(8px, 0.63vw, 12px);
     width: 100%;
-    max-width: 920px;
+    max-width: 48vw;                 /* ~920/1920 */
   }
 
-  .tcp__cta {
-    margin-top: 20px;
+  /* Pill — 451×70 at 1920 */
+  #section-clients .tcp-pill {
+    display: flex;
+    align-items: center;
+    gap: clamp(8px, 0.69vw, 13px);
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border-radius: clamp(12px, 0.92vw, 18px);
+    border: var(--glass-border);
+    padding: clamp(12px, 1.37vw, 26px) clamp(12px, 0.92vw, 18px);
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                box-shadow 0.4s ease,
+                border-color 0.4s ease,
+                background 0.4s ease;
+    cursor: pointer;
+  }
+
+  #section-clients .tcp-pill:hover {
+    transform: translateY(-3px) scale(1.01);
+    background: rgba(0, 0, 0, 0.55);
+    border-color: rgba(255, 255, 255, 0.15);
+    box-shadow:
+      0 6px 24px rgba(0, 0, 0, 0.3),
+      0 0 30px rgba(80, 180, 220, 0.06);
+  }
+
+  /* Pill icon — 44px at 1920 */
+  #section-clients .tcp-pill-icon {
+    width: clamp(30px, 2.29vw, 44px);
+    height: clamp(30px, 2.29vw, 44px);
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #section-clients .tcp-pill-icon-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  /* Pill text — 14px semibold */
+  #section-clients .tcp-pill-text {
+    font-family: var(--f-primary);
+    font-weight: var(--f-weight-semibold);
+    font-size: clamp(11px, 0.73vw, 14px);
+    color: #e6e6e6;
+    white-space: nowrap;
+  }
+
+  /* CTA */
+  #section-clients .tcp-cta {
+    margin-top: 1vh;
+  }
+
+  #section-clients .tcp-cta .cta-btn--lg.cta-btn {
+    padding: 18px 50px;
+    font-size: 1rem;
+    border-radius: 16px;
+  }
+
+  /* ---- Responsive ---- */
+
+  @media (max-width: 1440px) {
+    #section-clients .tcp-text { max-width: 60vw; }
+    #section-clients .tcp-pills { max-width: 55vw; }
+  }
+
+  @media (max-width: 1280px) {
+    #section-clients .tcp-text { max-width: 65vw; }
+    #section-clients .tcp-pills { max-width: 60vw; }
+    #section-clients .tcp-pill-text { white-space: normal; }
+    #section-clients .tcp-cta .cta-btn--lg.cta-btn {
+      padding: 16px 40px;
+      font-size: 0.9rem;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    #section-clients .tcp-layout {
+      align-items: center;
+      padding: 0 5%;
+    }
+    #section-clients .tcp-text {
+      align-items: center;
+      text-align: center;
+      max-width: 90vw;
+    }
+    #section-clients .tcp-desc { max-width: 80vw; }
+    #section-clients .tcp-pills { max-width: 85vw; }
+    #section-clients .tcp-pill-text { white-space: normal; font-size: 13px; }
+    #section-clients .tcp-cta .cta-btn--lg.cta-btn {
+      padding: 14px 36px;
+      font-size: 0.85rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    #section-clients .tcp-overlay {
+      width: 100%;
+      background: rgba(8, 29, 37, 0.3);
+    }
+    #section-clients .tcp-layout {
+      padding: 0 16px;
+      gap: 12px;
+    }
+    #section-clients .tcp-text {
+      align-items: center;
+      text-align: center;
+      max-width: 100%;
+      gap: 12px;
+    }
+    #section-clients .tcp-headline { font-size: 24px; }
+    #section-clients .tcp-subheadline { font-size: 16px; }
+    #section-clients .tcp-desc { font-size: 14px; max-width: 100%; }
+    #section-clients .tcp-pills {
+      grid-template-columns: 1fr;
+      max-width: 100%;
+    }
+    #section-clients .tcp-pill { padding: 12px 14px; }
+    #section-clients .tcp-pill-icon { width: 32px; height: 32px; }
+    #section-clients .tcp-pill-text { font-size: 13px; }
+    #section-clients .tcp-cta .cta-btn--lg.cta-btn {
+      padding: 16px 32px;
+      font-size: 14px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    #section-clients .tcp-layout { padding: 0 12px; gap: 10px; }
+    #section-clients .tcp-headline { font-size: 20px; }
+    #section-clients .tcp-subheadline { font-size: 14px; }
+    #section-clients .tcp-desc { font-size: 13px; }
+    #section-clients .tcp-pill { padding: 10px 12px; gap: 8px; }
+    #section-clients .tcp-pill-icon { width: 28px; height: 28px; }
+    #section-clients .tcp-pill-text { font-size: 12px; }
+    #section-clients .tcp-cta .cta-btn--lg.cta-btn {
+      padding: 14px 24px;
+      font-size: 13px;
+    }
   }
 </style>

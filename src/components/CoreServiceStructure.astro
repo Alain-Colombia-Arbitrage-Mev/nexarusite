@@ -70,21 +70,21 @@ const coreServices = [
   }
 
   /* Layout — left-aligned, vertically centered */
-  .cs-layout {
+  #section-services .cs-layout {
     justify-content: center;
     gap: 2vh;
-    padding: 0 0 0 8.23%;           /* left=158/1920 */
+    padding: 0 0 0 8.23% !important; /* left=158/1920 */
   }
 
   /* Header */
-  .cs-header {
+  #section-services .cs-header {
     display: flex;
     flex-direction: column;
     gap: 0;
   }
 
-  /* Headline — from Pencil: ~60px extrabold */
-  .cs-headline {
+  /* Headline — from Pencil */
+  #section-services .cs-headline {
     font-family: var(--f-primary);
     font-weight: var(--f-weight-extrabold);
     font-size: clamp(24px, 3.646vw, 70px);
@@ -93,7 +93,7 @@ const coreServices = [
   }
 
   /* Subheadline — italic */
-  .cs-subheadline {
+  #section-services .cs-subheadline {
     font-family: var(--f-primary);
     font-weight: var(--f-weight-regular);
     font-size: clamp(16px, 2.083vw, 40px);
@@ -102,16 +102,16 @@ const coreServices = [
     line-height: 1.2;
   }
 
-  /* Card grid — 4 in a row from Pencil */
-  .cs-grid {
-    display: flex;
+  /* Card grid — 4 in a row */
+  #section-services .cs-grid {
+    display: flex !important;
     gap: clamp(8px, 0.64vw, 12px);
     flex-wrap: wrap;
   }
 
-  /* Card — 364×275 at 1920, vertical layout with centered content */
-  .cs-card {
-    display: flex;
+  /* Card — 364×275 at 1920 */
+  #section-services .cs-card {
+    display: flex !important;
     flex-direction: column;
     align-items: center;
     text-align: center;
@@ -131,7 +131,7 @@ const coreServices = [
     cursor: pointer;
   }
 
-  .cs-card:hover {
+  #section-services .cs-card:hover {
     transform: translateY(-4px) scale(1.02);
     background: rgba(0, 0, 0, 0.45);
     border-color: rgba(255, 255, 255, 0.15);
@@ -141,7 +141,7 @@ const coreServices = [
   }
 
   /* Card icon — 77px at 1920 */
-  .cs-card-icon {
+  #section-services .cs-card-icon {
     width: clamp(48px, 4.03vw, 77px);
     height: clamp(48px, 4.03vw, 77px);
     flex-shrink: 0;
@@ -151,14 +151,14 @@ const coreServices = [
     margin-bottom: clamp(4px, 0.4vw, 8px);
   }
 
-  .cs-card-icon-img {
+  #section-services .cs-card-icon-img {
     width: 100%;
     height: 100%;
     object-fit: contain;
   }
 
   /* Card title — 20px semibold */
-  .cs-card-title {
+  #section-services .cs-card-title {
     font-family: var(--f-primary);
     font-weight: var(--f-weight-semibold);
     font-size: clamp(13px, 1.04vw, 20px);
@@ -166,12 +166,12 @@ const coreServices = [
     transition: color 0.4s ease;
   }
 
-  .cs-card:hover .cs-card-title {
+  #section-services .cs-card:hover .cs-card-title {
     color: #ffffff;
   }
 
   /* Card desc — 15px regular */
-  .cs-card-desc {
+  #section-services .cs-card-desc {
     font-family: var(--f-primary);
     font-weight: var(--f-weight-regular);
     font-size: clamp(11px, 0.78vw, 15px);
@@ -179,15 +179,15 @@ const coreServices = [
     line-height: 1.4;
   }
 
-  /* CTA — bottom right from Pencil: (1148, 876) */
-  .cs-cta {
+  /* CTA — bottom right from Pencil */
+  #section-services .cs-cta {
     position: absolute;
     bottom: 10%;
     right: 10%;
     z-index: 3;
   }
 
-  .cs-cta .cta-btn--lg.cta-btn {
+  #section-services .cs-cta .cta-btn--lg.cta-btn {
     padding: 18px 50px;
     font-size: 1rem;
     border-radius: 16px;
@@ -197,7 +197,7 @@ const coreServices = [
 
   /* ≤1440 */
   @media (max-width: 1440px) {
-    .cs-card {
+    #section-services .cs-card {
       width: clamp(160px, 22vw, 340px);
       min-height: clamp(160px, 13vw, 250px);
     }
@@ -205,13 +205,13 @@ const coreServices = [
 
   /* ≤1280 */
   @media (max-width: 1280px) {
-    .cs-layout { padding: 0 0 0 5%; }
-    .cs-card {
+    #section-services .cs-layout { padding: 0 0 0 5% !important; }
+    #section-services .cs-card {
       width: clamp(150px, 23vw, 300px);
       min-height: clamp(150px, 12.5vw, 230px);
     }
-    .cs-cta { right: 5%; bottom: 8%; }
-    .cs-cta .cta-btn--lg.cta-btn {
+    #section-services .cs-cta { right: 5%; bottom: 8%; }
+    #section-services .cs-cta .cta-btn--lg.cta-btn {
       padding: 16px 40px;
       font-size: 0.9rem;
     }
@@ -219,19 +219,19 @@ const coreServices = [
 
   /* ≤1024 — 2x2 grid */
   @media (max-width: 1024px) {
-    .cs-layout {
-      padding: 0 5%;
+    #section-services .cs-layout {
+      padding: 0 5% !important;
       align-items: center;
     }
-    .cs-grid {
+    #section-services .cs-grid {
       max-width: 90vw;
       justify-content: center;
     }
-    .cs-card {
+    #section-services .cs-card {
       width: 42vw;
       min-height: auto;
     }
-    .cs-cta {
+    #section-services .cs-cta {
       position: static;
       align-self: center;
     }
@@ -239,31 +239,28 @@ const coreServices = [
 
   /* ≤768 — single column */
   @media (max-width: 768px) {
-    .cs-gradient-left { width: 100%; }
-    .cs-layout {
-      padding: 0 20px;
+    #section-services .cs-gradient-left { width: 100%; }
+    #section-services .cs-layout {
+      padding: 0 20px !important;
       gap: 16px;
     }
-    .cs-headline { font-size: 28px; }
-    .cs-subheadline { font-size: 18px; }
-    .cs-header { align-items: center; text-align: center; }
-    .cs-grid {
+    #section-services .cs-headline { font-size: 28px; }
+    #section-services .cs-subheadline { font-size: 18px; }
+    #section-services .cs-header { align-items: center; text-align: center; }
+    #section-services .cs-grid {
       flex-direction: column;
       align-items: center;
       gap: 12px;
     }
-    .cs-card {
+    #section-services .cs-card {
       width: 100%;
       min-height: auto;
       padding: 16px;
     }
-    .cs-card-icon {
-      width: 56px;
-      height: 56px;
-    }
-    .cs-card-title { font-size: 16px; }
-    .cs-card-desc { font-size: 13px; }
-    .cs-cta .cta-btn--lg.cta-btn {
+    #section-services .cs-card-icon { width: 56px; height: 56px; }
+    #section-services .cs-card-title { font-size: 16px; }
+    #section-services .cs-card-desc { font-size: 13px; }
+    #section-services .cs-cta .cta-btn--lg.cta-btn {
       padding: 16px 32px;
       font-size: 14px;
     }
@@ -271,22 +268,14 @@ const coreServices = [
 
   /* ≤480 */
   @media (max-width: 480px) {
-    .cs-layout {
-      padding: 0 12px;
-      gap: 12px;
-    }
-    .cs-headline { font-size: 22px; }
-    .cs-subheadline { font-size: 15px; }
-    .cs-card {
-      padding: 14px 12px;
-    }
-    .cs-card-icon {
-      width: 48px;
-      height: 48px;
-    }
-    .cs-card-title { font-size: 14px; }
-    .cs-card-desc { font-size: 12px; }
-    .cs-cta .cta-btn--lg.cta-btn {
+    #section-services .cs-layout { padding: 0 12px !important; gap: 12px; }
+    #section-services .cs-headline { font-size: 22px; }
+    #section-services .cs-subheadline { font-size: 15px; }
+    #section-services .cs-card { padding: 14px 12px; }
+    #section-services .cs-card-icon { width: 48px; height: 48px; }
+    #section-services .cs-card-title { font-size: 14px; }
+    #section-services .cs-card-desc { font-size: 12px; }
+    #section-services .cs-cta .cta-btn--lg.cta-btn {
       padding: 14px 24px;
       font-size: 13px;
     }
