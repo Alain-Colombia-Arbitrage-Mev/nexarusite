@@ -131,6 +131,31 @@ const advantages = [
     padding: 1.2vh 1.41vw;
     width: 22.9vw;                   /* 440/1920 */
     min-height: 11vh;                /* scales with viewport height */
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                box-shadow 0.4s ease,
+                border-color 0.4s ease,
+                background 0.4s ease;
+    transform-style: preserve-3d;
+    cursor: pointer;
+  }
+
+  .ka__card:hover {
+    transform: translateY(-4px) scale(1.02) perspective(800px) rotateX(2deg);
+    background: rgba(0, 0, 0, 0.45);
+    border-color: rgba(255, 255, 255, 0.15);
+    box-shadow:
+      0 8px 32px rgba(0, 0, 0, 0.3),
+      0 0 40px rgba(80, 180, 220, 0.08),
+      inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  }
+
+  .ka__card:hover .ka__card-icon {
+    border-color: #ffffff;
+    box-shadow: 0 0 20px rgba(80, 180, 220, 0.2);
+  }
+
+  .ka__card:hover .ka__card-title {
+    color: #ffffff;
   }
 
   .ka__card-icon {
@@ -144,6 +169,7 @@ const advantages = [
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
+    transition: border-color 0.4s ease, box-shadow 0.4s ease;
   }
 
   .ka__card-icon-placeholder {
@@ -166,6 +192,7 @@ const advantages = [
     font-weight: var(--f-weight-semibold);
     font-size: clamp(14px, 1.13vw, 22px);
     color: #d5d5d5;
+    transition: color 0.4s ease;
   }
 
   /* Card desc */
