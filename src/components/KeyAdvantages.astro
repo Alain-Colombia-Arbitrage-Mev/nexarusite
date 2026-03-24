@@ -12,29 +12,29 @@ const advantages = [
 <section class="section" id="section-advantages" data-section="advantages" data-video="/videos/Secuencia 005.mp4">
   <video class="section__video" muted playsinline preload="none"></video>
 
-  <div class="gradient-left"></div>
+  <div class="ka__gradient-left"></div>
   <div class="gradient-top"></div>
   <div class="gradient-bottom"></div>
 
-  <div class="ka__content section__content">
+  <div class="ka__content">
     <div class="ka__header">
-      <h2 class="text-headline anim-fade-left" style="color:#e6e6e6">
+      <h2 class="ka__headline anim-fade-left">
         Why global founders, investors,
       </h2>
-      <p class="text-subheadline anim-fade-left" style="color:#e6e6e6">
+      <p class="ka__subheadline anim-fade-left">
         and professionals choose the UAE
       </p>
     </div>
 
     <div class="ka__grid">
       {advantages.map((item, i) => (
-        <div class="advantage-card anim-scale-in" style={`--delay: ${i * 0.08}s`}>
-          <div class="advantage-card__icon">
-            <div class="section-icon__placeholder" style="font-size:1.6rem">{item.icon}</div>
+        <div class="ka__card anim-scale-in" style={`--delay: ${i * 0.08}s`}>
+          <div class="ka__card-icon">
+            <div class="ka__card-icon-placeholder">{item.icon}</div>
           </div>
-          <div>
-            <p class="advantage-card__title">{item.title}</p>
-            <p class="advantage-card__desc">{item.desc}</p>
+          <div class="ka__card-text">
+            <p class="ka__card-title">{item.title}</p>
+            <p class="ka__card-desc">{item.desc}</p>
           </div>
         </div>
       ))}
@@ -49,9 +49,59 @@ const advantages = [
 </section>
 
 <style>
+  /* Remove backdrop-filter flickering */
+  #section-advantages .gradient-top,
+  #section-advantages .gradient-bottom {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+
+  /* Left gradient — wider than Strategic Positioning */
+  .ka__gradient-left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 67.86%;                   /* 1303/1920 */
+    height: 100%;
+    background: linear-gradient(
+      to right,
+      rgb(8, 29, 37) 0%,
+      rgba(8, 29, 37, 0.5) 37.8%,
+      rgba(8, 29, 37, 0) 100%
+    );
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  /* Content layout — centered vertically */
   .ka__content {
-    padding: 120px 7% 100px;
-    gap: 30px;
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 0 0 6.61%;            /* left=127/1920 */
+    gap: 1.5vh;
+  }
+
+  /* Headline — scales with viewport */
+  .ka__headline {
+    font-family: var(--f-primary);
+    font-weight: var(--f-weight-extrabold);
+    font-size: clamp(28px, 5.5vh, 70px);
+    color: #e6e6e6;
+    text-transform: uppercase;
+    line-height: 1.02;
+  }
+
+  /* Subheadline */
+  .ka__subheadline {
+    font-family: var(--f-primary);
+    font-weight: var(--f-weight-regular);
+    font-size: clamp(18px, 3.2vh, 40px);
+    color: #e6e6e6;
+    line-height: 1.2;
   }
 
   .ka__header {
@@ -60,16 +110,204 @@ const advantages = [
     gap: 4px;
   }
 
+  /* Card grid — 2 columns */
   .ka__grid {
     display: flex;
     flex-wrap: wrap;
-    gap: 19px 67px;
-    max-width: 970px;
+    gap: 1vh 3.49vw;                /* row gap scales with height */
+    max-width: 50.42vw;             /* 968/1920 */
   }
 
+  /* Card — scales with both vw and vh */
+  .ka__card {
+    display: flex;
+    align-items: center;
+    gap: 1.13vw;                     /* 22/1920 */
+    background: var(--glass-bg);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border-radius: var(--glass-radius);
+    border: var(--glass-border);
+    padding: 1.2vh 1.41vw;
+    width: 22.9vw;                   /* 440/1920 */
+    min-height: 11vh;                /* scales with viewport height */
+  }
+
+  .ka__card-icon {
+    width: clamp(44px, 4.71vw, 90px);
+    height: clamp(44px, 4.71vw, 90px);
+    min-width: 44px;
+    min-height: 44px;
+    border-radius: 50%;
+    border: 2.7px solid #d5d5d5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .ka__card-icon-placeholder {
+    font-size: 1.3vw;
+    color: #d5d5d5;
+    font-weight: var(--f-weight-bold);
+  }
+
+  .ka__card-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.38vw;                     /* 7/1920 */
+    flex: 1;
+  }
+
+  /* Card title */
+  .ka__card-title {
+    font-family: var(--f-primary);
+    font-weight: var(--f-weight-semibold);
+    font-size: clamp(14px, 1.13vw, 22px);
+    color: #d5d5d5;
+  }
+
+  /* Card desc */
+  .ka__card-desc {
+    font-family: var(--f-primary);
+    font-weight: var(--f-weight-regular);
+    font-size: clamp(11px, 0.75vw, 14.5px);
+    color: #e9e9e9;
+    line-height: 1.4;
+  }
+
+  /* CTA — below grid */
   .ka__cta {
-    margin-top: auto;
+    margin-top: 1.5vh;
     align-self: flex-start;
-    margin-left: 5%;
+    padding-left: 3%;
+  }
+
+  .ka__cta .cta-btn--lg.cta-btn {
+    padding: 18px 50px;
+    font-size: 1rem;
+    border-radius: 16px;
+  }
+
+  /* ---- Responsive ---- */
+
+  /* Medium desktop: ≤1440 */
+  @media (max-width: 1440px) {
+    .ka__content {
+      padding: 15% 0 0 5%;
+    }
+    .ka__grid {
+      max-width: 55vw;
+    }
+  }
+
+  /* Small desktop: ≤1280 */
+  @media (max-width: 1280px) {
+    .ka__content {
+      padding: 14% 0 0 5%;
+      gap: 1.5vw;
+    }
+    .ka__grid {
+      max-width: 60vw;
+      gap: 1vw 3vw;
+    }
+    .ka__card {
+      width: 28vw;
+    }
+  }
+
+  /* Tablet landscape: ≤1024 */
+  @media (max-width: 1024px) {
+    .ka__content {
+      padding: 12% 5% 0;
+      gap: 1.5vw;
+    }
+    .ka__headline { font-size: 4.5vw; }
+    .ka__subheadline { font-size: 2.5vw; }
+    .ka__grid {
+      max-width: 90vw;
+      gap: 1.2vw 2.5vw;
+    }
+    .ka__card {
+      width: 43vw;
+      min-height: 9vw;
+      padding: 1.2vw 1.8vw;
+    }
+    .ka__card-title { font-size: 1.5vw; }
+    .ka__card-desc { font-size: 1vw; }
+    .ka__card-icon {
+      width: 6vw;
+      height: 6vw;
+    }
+    .ka__cta { padding-left: 0; }
+  }
+
+  /* Tablet portrait: ≤768px */
+  @media (max-width: 768px) {
+    .ka__gradient-left { width: 100%; }
+    .ka__content {
+      padding: 100px 20px 80px;
+      gap: 16px;
+      justify-content: center;
+    }
+    .ka__headline { font-size: 28px; }
+    .ka__subheadline { font-size: 18px; }
+    .ka__grid {
+      flex-direction: column;
+      max-width: 100%;
+      gap: 12px;
+    }
+    .ka__card {
+      width: 100%;
+      min-height: auto;
+      padding: 14px 18px;
+      gap: 14px;
+      border-radius: 14px;
+    }
+    .ka__card-icon {
+      width: 56px;
+      height: 56px;
+      min-width: 56px;
+      min-height: 56px;
+    }
+    .ka__card-icon-placeholder { font-size: 18px; }
+    .ka__card-title { font-size: 16px; }
+    .ka__card-desc { font-size: 13px; }
+    .ka__cta {
+      align-self: center;
+      padding-left: 0;
+      padding-bottom: 0;
+    }
+    .ka__cta .cta-btn {
+      padding: 20px 30px;
+      font-size: 14px;
+    }
+  }
+
+  /* Mobile: ≤480px */
+  @media (max-width: 480px) {
+    .ka__content {
+      padding: 80px 12px 60px;
+      gap: 12px;
+    }
+    .ka__headline { font-size: 22px; }
+    .ka__subheadline { font-size: 15px; }
+    .ka__card {
+      padding: 12px 14px;
+      gap: 12px;
+    }
+    .ka__card-icon {
+      width: 48px;
+      height: 48px;
+      min-width: 48px;
+      min-height: 48px;
+    }
+    .ka__card-title { font-size: 14px; }
+    .ka__card-desc { font-size: 12px; }
+    .ka__cta .cta-btn {
+      padding: 16px 24px;
+      font-size: 13px;
+    }
   }
 </style>
