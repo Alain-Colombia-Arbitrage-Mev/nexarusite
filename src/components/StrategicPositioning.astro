@@ -1,7 +1,8 @@
 ---
+const cdn = import.meta.env.PUBLIC_CDN_URL || '';
 ---
 
-<section class="section" id="section-strategic" data-section="strategic" data-video="/videos/Secuencia 003.mp4">
+<section class="section" id="section-strategic" data-section="strategic" data-video={`${cdn}/videos/Secuencia 003.mp4`}>
   <video class="section__video" muted playsinline preload="none"></video>
 
   <div class="gradient-left-teal"></div>

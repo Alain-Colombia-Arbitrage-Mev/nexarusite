@@ -5,9 +5,10 @@ const coreServices = [
   { title: 'Investor and Founder Migration', desc: 'Support for entrepreneurs, investors, and founders establishing operational base in UAE.', icon: '/icons/money-investor.png' },
   { title: 'Institutional and Regulatory Coordination', desc: 'Direct management of regulatory processes and compliance requirements.', icon: '/icons/documents-regulatory.png' },
 ];
+const cdn = import.meta.env.PUBLIC_CDN_URL || '';
 ---
 
-<section class="section" id="section-services" data-section="services" data-video="/videos/Secuencia 007.mp4">
+<section class="section" id="section-services" data-section="services" data-video={`${cdn}/videos/Secuencia 007.mp4`}>
   <video class="section__video" muted playsinline preload="none"></video>
 
   <div class="cs-gradient-left"></div>

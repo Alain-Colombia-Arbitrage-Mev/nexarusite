@@ -1,9 +1,10 @@
 ---
+const cdn = import.meta.env.PUBLIC_CDN_URL || '';
 ---
 
 <div class="loader" id="loader">
   <video
-    src="/videos/opener.mp4"
+    src={`${cdn}/videos/opener.mp4`}
     muted
     playsinline
     autoplay

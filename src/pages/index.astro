@@ -10,6 +10,7 @@ import WhatNGSProvides from '../components/WhatNGSProvides.astro';
 import CoreServiceStructure from '../components/CoreServiceStructure.astro';
 import TargetClientProfile from '../components/TargetClientProfile.astro';
 import FinalCTA from '../components/FinalCTA.astro';
+const cdn = import.meta.env.PUBLIC_CDN_URL || '';
 ---
 
 <Layout title="Nexaru Global Services — UAE Migration & Investment">
@@ -21,13 +22,13 @@ import FinalCTA from '../components/FinalCTA.astro';
     <Hero />
 
     <!-- 1: Transition to Strategic Positioning -->
-    <Transition id="trans-02" video="/videos/Secuencia 002.mp4" index={1} />
+    <Transition id="trans-02" video={`${cdn}/videos/Secuencia 002.mp4`} index={1} />
 
     <!-- 2: Strategic Positioning -->
     <StrategicPositioning />
 
     <!-- 3: Transition to Key Advantages -->
-    <Transition id="trans-04" video="/videos/Secuencia 004.mp4" index={3} />
+    <Transition id="trans-04" video={`${cdn}/videos/Secuencia 004.mp4`} index={3} />
 
     <!-- 4: Key Advantages of UAE -->
     <KeyAdvantages />
@@ -36,7 +37,7 @@ import FinalCTA from '../components/FinalCTA.astro';
     <WhatNGSProvides />
 
     <!-- 6: Transition to Core Services -->
-    <Transition id="trans-07" video="/videos/Secuencia 007.mp4" index={6} />
+    <Transition id="trans-07" video={`${cdn}/videos/Secuencia 007.mp4`} index={6} />
 
     <!-- 7: Core Service Structure -->
     <CoreServiceStructure />

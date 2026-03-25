@@ -7,9 +7,10 @@ const clients = [
   { text: 'Investors requiring residency alignment', icon: '/icons/team-investors.png' },
   { text: 'Families relocating with structured legal support', icon: '/icons/family-restroom.png' },
 ];
+const cdn = import.meta.env.PUBLIC_CDN_URL || '';
 ---
 
-<section class="section" id="section-clients" data-section="clients" data-video="/videos/Secuencia 008.mp4">
+<section class="section" id="section-clients" data-section="clients" data-video={`${cdn}/videos/Secuencia 008.mp4`}>
   <video class="section__video" muted playsinline preload="none"></video>
 
   <div class="gradient-top"></div>

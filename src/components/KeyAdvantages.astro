@@ -7,9 +7,10 @@ const advantages = [
   { title: 'Financial Infrastructure', desc: "Operate within one of the world's most advanced banking environments.", icon: '/icons/bank.png' },
   { title: 'Personal and Family Security', desc: 'Live and operate in one of the safest countries globally.', icon: '/icons/security.png' },
 ];
+const cdn = import.meta.env.PUBLIC_CDN_URL || '';
 ---
 
-<section class="section" id="section-advantages" data-section="advantages" data-video="/videos/Secuencia 005.mp4">
+<section class="section" id="section-advantages" data-section="advantages" data-video={`${cdn}/videos/Secuencia 005.mp4`}>
   <video class="section__video" muted playsinline preload="none"></video>
 
   <div class="ka__gradient-left"></div>

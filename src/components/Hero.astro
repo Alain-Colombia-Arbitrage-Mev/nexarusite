@@ -31,9 +31,10 @@ const sideIcons = [
     icon: `<svg width="35" height="35" viewBox="0 0 35 35" fill="none"><path d="M9.35 17.13c.95-6.46 7.78-14.8 7.78-14.8s6.84 8.34 7.79 14.8c.85 5.79-2.34 15.58-2.34 15.58H11.68s-3.19-9.79-2.33-15.58z" stroke="#D5D5D5" stroke-width="3.12" stroke-linecap="round" stroke-linejoin="round"/><path d="M12.46 9.35h9.34M10.12 14.02h14.02M9.35 18.69h15.57M10.12 23.36h14.02M10.9 28.04h12.46" stroke="#D5D5D5" stroke-width="3.12" stroke-linecap="round"/><path d="M1.56 32.71h31.15" stroke="#D5D5D5" stroke-width="3.12" stroke-linecap="round" stroke-linejoin="round"/><path d="M17.13 1.56v1.56" stroke="#D5D5D5" stroke-width="3.12" stroke-linecap="round"/></svg>`,
   },
 ];
+const cdn = import.meta.env.PUBLIC_CDN_URL || '';
 ---
 
-<section class="section" id="section-hero" data-section="hero" data-video="/videos/Secuencia 001.mp4">
+<section class="section" id="section-hero" data-section="hero" data-video={`${cdn}/videos/Secuencia 001.mp4`}>
   <video class="section__video" muted playsinline preload="auto"></video>
 
   <div class="hero__glass-top"></div>

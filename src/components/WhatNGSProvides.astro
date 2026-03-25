@@ -4,9 +4,10 @@ const services = [
   { text: 'We coordinate every stage of the process...', icon: '/icons/justice-hammer.png' },
   { text: 'Our role extends beyond processing...', icon: '/icons/guide-board.png' },
 ];
+const cdn = import.meta.env.PUBLIC_CDN_URL || '';
 ---
 
-<section class="section" id="section-provides" data-section="provides" data-video="/videos/Secuencia 006.mp4">
+<section class="section" id="section-provides" data-section="provides" data-video={`${cdn}/videos/Secuencia 006.mp4`}>
   <video class="section__video" muted playsinline preload="none"></video>
 
   <div class="wp-gradient-top"></div>
