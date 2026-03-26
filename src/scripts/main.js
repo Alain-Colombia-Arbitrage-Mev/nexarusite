@@ -222,39 +222,49 @@ document.addEventListener('DOMContentLoaded', () => {
   // ========================================
   // 4. Entry Animations
   // ========================================
+  const ANIM_CLASSES = ['anim-fade-up', 'anim-fade-left', 'anim-fade-right', 'anim-scale-in'];
+
+  function tagAnimElements(section) {
+    section.querySelectorAll(ANIM_CLASSES.map(c => '.' + c).join(', ')).forEach(el => {
+      if (!el.dataset.anim) {
+        const cls = ANIM_CLASSES.find(c => el.classList.contains(c));
+        if (cls) el.dataset.anim = cls;
+      }
+    });
+  }
+
   function runAnimations(section) {
-    const animElements = section.querySelectorAll(
-      '.anim-fade-up, .anim-fade-left, .anim-fade-right, .anim-scale-in'
-    );
+    tagAnimElements(section);
+    const animElements = section.querySelectorAll('[data-anim]');
 
     animElements.forEach((el, i) => {
+      const cls = el.dataset.anim;
+      if (!el.classList.contains(cls)) el.classList.add(cls);
+
       const delay = parseFloat(el.style.getPropertyValue('--delay') || '0') + i * 0.06;
+      const totalMs = (delay + 0.7) * 1000 + 50;
       el.style.transition = `opacity 0.7s ease ${delay}s, transform 0.7s cubic-bezier(0.16, 1, 0.3, 1) ${delay}s`;
       el.style.opacity = '1';
       el.style.transform = 'translate(0, 0) scale(1)';
+
+      setTimeout(() => {
+        el.style.transition = '';
+        el.style.opacity = '';
+        el.style.transform = '';
+        el.classList.remove(cls);
+      }, totalMs);
     });
   }
 
   function resetAnimations(section) {
-    const animElements = section.querySelectorAll(
-      '.anim-fade-up, .anim-fade-left, .anim-fade-right, .anim-scale-in'
-    );
+    const animElements = section.querySelectorAll('[data-anim]');
 
     animElements.forEach(el => {
+      const cls = el.dataset.anim;
+      if (!el.classList.contains(cls)) el.classList.add(cls);
       el.style.transition = 'none';
-      if (el.classList.contains('anim-fade-up')) {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(40px)';
-      } else if (el.classList.contains('anim-fade-left')) {
-        el.style.opacity = '0';
-        el.style.transform = 'translateX(-60px)';
-      } else if (el.classList.contains('anim-fade-right')) {
-        el.style.opacity = '0';
-        el.style.transform = 'translateX(60px)';
-      } else if (el.classList.contains('anim-scale-in')) {
-        el.style.opacity = '0';
-        el.style.transform = 'scale(0.9)';
-      }
+      el.style.opacity = '';
+      el.style.transform = '';
     });
   }
 
