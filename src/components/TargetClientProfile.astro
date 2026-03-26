@@ -56,16 +56,22 @@ const cdn = import.meta.env.PUBLIC_CDN_URL || '';
     -webkit-backdrop-filter: none;
   }
 
-  /* Right blur overlay — from Pencil: 1140px wide, right-aligned */
   :global(#section-clients) .tcp-overlay {
     position: absolute;
-    top: 0;
+    top: 13px;
     right: 0;
-    bottom: 0;
-    width: 55%;
-    background: linear-gradient(to left, transparent 5%, rgba(8, 29, 37, 0.08) 35%, rgba(8, 29, 37, 0.18));
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px);
+    height: 1067px;
+    width: 1140px;
+    max-width: 60%;
+    background: linear-gradient(
+      to left,
+      rgba(8, 29, 37, 0.4) 0%,
+      rgba(8, 29, 37, 0.2) 38%,
+      rgba(8, 29, 37, 0) 100%
+    );
+    opacity: 0.4;
+    backdrop-filter: blur(32.8px);
+    -webkit-backdrop-filter: blur(32.8px);
     z-index: 1;
     pointer-events: none;
   }
@@ -231,7 +237,10 @@ const cdn = import.meta.env.PUBLIC_CDN_URL || '';
   @media (max-width: 768px) {
     :global(#section-clients) .tcp-overlay {
       width: 100%;
-      background: rgba(8, 29, 37, 0.3);
+      max-width: 100%;
+      top: 0;
+      height: 100%;
+      background: linear-gradient(to right, rgba(8, 29, 37, 0.35), rgba(8, 29, 37, 0.15) 50%, transparent);
     }
     :global(#section-clients) .tcp-layout {
       padding: 0 16px;
