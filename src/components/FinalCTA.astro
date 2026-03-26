@@ -5,33 +5,29 @@ const cdn = import.meta.env.PUBLIC_CDN_URL || '';
 <section class="section" id="section-cta" data-section="cta" data-video={`${cdn}/videos/Secuencia 009.mp4`}>
   <video class="section__video" muted playsinline preload="none"></video>
 
-  <div class="gradient-top" style="height:491px"></div>
-  <div class="gradient-bottom" style="height:428px"></div>
-
-  <!-- Right fade -->
+  <div class="fcta__grad-top"></div>
+  <div class="fcta__grad-bottom"></div>
   <div class="fcta__right-fade"></div>
 
-  <div class="fcta__content section__content">
-    <div class="fcta__text">
-      <h2 class="fcta__title anim-fade-up">
-        <span class="text-headline">Establish your future</span>
-        <span class="text-subheadline">from one of the world's most strategic jurisdictions</span>
-      </h2>
+  <div class="fcta__content">
+    <h2 class="fcta__title anim-fade-up">
+      <span class="fcta__title-main">Establish your future</span>
+      <span class="fcta__title-sub">from one of the world's most strategic jurisdictions</span>
+    </h2>
 
-      <p class="fcta__desc anim-fade-up">
-        Whether you are relocating personally or establishing corporate operations, Nexaru Global Services ensures your transition is structured, secure, and professionally managed.
-      </p>
+    <p class="fcta__desc anim-fade-up">
+      Whether you are relocating personally or establishing corporate operations, Nexaru Global Services ensures your transition is structured, secure, and professionally managed.
+    </p>
 
-      <p class="fcta__sub anim-fade-up">
-        Begin with a structured assessment to determine the optimal pathway for your case.
-      </p>
-    </div>
+    <p class="fcta__sub anim-fade-up">
+      Begin with a structured assessment to determine the optimal pathway for your case.
+    </p>
 
     <div class="fcta__buttons anim-fade-up">
-      <button class="cta-btn--lg cta-btn">
+      <button class="fcta__btn">
         Start Your Migration or Investment Process
       </button>
-      <button class="cta-btn--lg cta-btn">
+      <button class="fcta__btn">
         Contact Nexaru Global Services
       </button>
     </div>
@@ -39,6 +35,33 @@ const cdn = import.meta.env.PUBLIC_CDN_URL || '';
 </section>
 
 <style>
+  .fcta__grad-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 491px;
+    background: linear-gradient(
+      to bottom,
+      rgba(4, 15, 19, 0.7),
+      rgba(4, 15, 19, 0.35) 75.48%,
+      transparent
+    );
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  .fcta__grad-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 428px;
+    background: linear-gradient(to top, rgba(4, 15, 19, 0.7), transparent);
+    z-index: 1;
+    pointer-events: none;
+  }
+
   .fcta__right-fade {
     position: absolute;
     top: 0;
@@ -46,53 +69,220 @@ const cdn = import.meta.env.PUBLIC_CDN_URL || '';
     bottom: 0;
     width: 756px;
     background: linear-gradient(to left, rgba(4, 15, 19, 0.7), transparent);
-    backdrop-filter: blur(var(--glass-blur));
     z-index: 1;
     pointer-events: none;
   }
 
   .fcta__content {
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    gap: 30px;
-    padding: 120px 10%;
-  }
-
-  .fcta__text {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
-    max-width: 1300px;
+    text-align: center;
+    padding-top: 156px;
+    padding-left: 114px;
+    padding-right: 114px;
   }
 
   .fcta__title {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 0;
     color: #e8e8e8;
+    max-width: 1693px;
+    margin: 0;
+  }
+
+  .fcta__title-main {
+    font-family: var(--f-primary);
+    font-weight: var(--f-weight-extrabold);
+    font-size: 70px;
+    line-height: 1.1;
+    text-transform: uppercase;
+  }
+
+  .fcta__title-sub {
+    font-family: var(--f-primary);
+    font-weight: var(--f-weight-regular);
+    font-size: 40px;
+    line-height: 1.2;
   }
 
   .fcta__desc {
-    font-size: 1.8rem;
+    font-family: var(--f-primary);
+    font-weight: var(--f-weight-regular);
+    font-size: 32px;
     color: #e8e8e8;
-    line-height: 1.4;
-    max-width: 1100px;
+    line-height: 1.3;
+    max-width: 1303px;
+    margin: 0;
+    margin-top: 24px;
   }
 
   .fcta__sub {
+    font-family: var(--f-primary);
     font-weight: var(--f-weight-semibold);
-    font-size: 1.4rem;
+    font-size: 24px;
     color: #e8e8e8;
-    margin-top: 20px;
+    max-width: 977px;
+    margin: 0;
+    margin-top: 240px;
   }
 
   .fcta__buttons {
     display: flex;
-    gap: 30px;
+    gap: 77px;
     margin-top: 20px;
-    flex-wrap: wrap;
     justify-content: center;
+  }
+
+  .fcta__btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 752px;
+    height: 132px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    border: none;
+    padding: 40px 50px;
+    font-family: var(--f-primary);
+    font-weight: var(--f-weight-black);
+    font-size: 24px;
+    color: white;
+    text-align: center;
+    white-space: nowrap;
+    box-shadow: 0 0 100px rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .fcta__btn:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 130px rgba(255, 255, 255, 0.6);
+  }
+
+  /* ---- Responsive ---- */
+  @media (max-width: 1600px) {
+    .fcta__content {
+      padding-top: calc(156 / 1080 * 100vh);
+      padding-left: clamp(40px, 5.9vw, 114px);
+      padding-right: clamp(40px, 5.9vw, 114px);
+    }
+
+    .fcta__title-main {
+      font-size: clamp(36px, 3.65vw, 70px);
+    }
+
+    .fcta__title-sub {
+      font-size: clamp(22px, 2.08vw, 40px);
+    }
+
+    .fcta__desc {
+      font-size: clamp(18px, 1.67vw, 32px);
+    }
+
+    .fcta__sub {
+      font-size: clamp(14px, 1.25vw, 24px);
+      margin-top: clamp(80px, 22.2vh, 240px);
+    }
+
+    .fcta__buttons {
+      gap: clamp(24px, 4vw, 77px);
+    }
+
+    .fcta__btn {
+      width: clamp(320px, 39.17vw, 752px);
+      height: auto;
+      min-height: clamp(72px, 6.88vw, 132px);
+      font-size: clamp(14px, 1.25vw, 24px);
+      padding: clamp(20px, 2.08vw, 40px) clamp(24px, 2.6vw, 50px);
+      white-space: normal;
+    }
+
+    .fcta__right-fade {
+      width: clamp(240px, 39.38vw, 756px);
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .fcta__content {
+      padding: 100px 32px 60px;
+      justify-content: center;
+    }
+
+    .fcta__title-main {
+      font-size: 32px;
+    }
+
+    .fcta__title-sub {
+      font-size: 22px;
+    }
+
+    .fcta__desc {
+      font-size: 18px;
+      margin-top: 16px;
+    }
+
+    .fcta__sub {
+      font-size: 15px;
+      margin-top: 40px;
+    }
+
+    .fcta__buttons {
+      flex-direction: column;
+      gap: 16px;
+      width: 100%;
+      margin-top: 16px;
+    }
+
+    .fcta__btn {
+      width: 100%;
+      min-height: 72px;
+      font-size: 15px;
+      padding: 22px 24px;
+      white-space: normal;
+      box-shadow: 0 0 60px rgba(255, 255, 255, 0.4);
+    }
+
+    .fcta__right-fade {
+      width: 30%;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .fcta__content {
+      padding: 72px 20px 40px;
+    }
+
+    .fcta__title-main {
+      font-size: 24px;
+    }
+
+    .fcta__title-sub {
+      font-size: 17px;
+    }
+
+    .fcta__desc {
+      font-size: 15px;
+    }
+
+    .fcta__sub {
+      font-size: 13px;
+      margin-top: 28px;
+    }
+
+    .fcta__btn {
+      min-height: 58px;
+      font-size: 13px;
+      padding: 16px 18px;
+      box-shadow: 0 0 40px rgba(255, 255, 255, 0.35);
+    }
+
+    .fcta__right-fade {
+      display: none;
+    }
   }
 </style>

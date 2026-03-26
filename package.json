@@ -16,5 +16,8 @@
     "astro": "^6.0.8",
     "gsap": "^3.14.2",
     "typescript": "^5.9.3"
+  },
+  "devDependencies": {
+    "wrangler": "^4.77.0"
   }
 }

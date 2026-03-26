@@ -12,7 +12,14 @@ const links = [
   <div class="nav__logo">
     <img src="/logo.svg" alt="Nexaru Global Services" width="50" height="50" />
   </div>
-  <div class="nav__links">
+
+  <button class="nav__toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+    <span class="nav__toggle-bar"></span>
+    <span class="nav__toggle-bar"></span>
+    <span class="nav__toggle-bar"></span>
+  </button>
+
+  <div class="nav__links" id="nav-links">
     {links.map(link => (
       <button class="nav__link" data-target={link.id}>
         {link.label}
@@ -20,6 +27,28 @@ const links = [
     ))}
   </div>
 </nav>
+
+<script>
+  const toggle = document.getElementById('nav-toggle');
+  const links = document.getElementById('nav-links');
+  const nav = document.getElementById('main-nav');
+
+  if (toggle && links) {
+    toggle.addEventListener('click', () => {
+      const isOpen = links.classList.toggle('is-open');
+      toggle.classList.toggle('is-open', isOpen);
+      toggle.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    links.querySelectorAll('.nav__link').forEach(link => {
+      link.addEventListener('click', () => {
+        links.classList.remove('is-open');
+        toggle.classList.remove('is-open');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
+</script>
 
 <style>
   .nav {
@@ -30,8 +59,8 @@ const links = [
     z-index: 50;
     display: flex;
     align-items: center;
-    padding: 20px 50px;
-    gap: 40px;
+    padding: 14px 40px;
+    gap: 32px;
     opacity: 0;
     transform: translateY(-20px);
     transition: opacity 0.6s ease, transform 0.6s ease;
@@ -46,20 +75,65 @@ const links = [
     flex-shrink: 0;
   }
 
+  .nav__logo img {
+    display: block;
+    width: 38px;
+    height: 38px;
+  }
+
+  /* ---- Hamburger toggle (hidden on desktop) ---- */
+  .nav__toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 36px;
+    height: 36px;
+    padding: 4px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: auto;
+    z-index: 52;
+  }
+
+  .nav__toggle-bar {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #d5d5d5;
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    transform-origin: center;
+  }
+
+  .nav__toggle.is-open .nav__toggle-bar:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .nav__toggle.is-open .nav__toggle-bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .nav__toggle.is-open .nav__toggle-bar:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  /* ---- Desktop links ---- */
   .nav__links {
     display: flex;
     align-items: center;
-    gap: 39px;
+    gap: 28px;
     margin-left: auto;
   }
 
   .nav__link {
     font-family: var(--f-primary);
     font-weight: var(--f-weight-light);
-    font-size: 0.9rem;
-    color: var(--c-text-muted);
+    font-size: 0.82rem;
+    color: #d5d5d5;
     letter-spacing: 0.02em;
-    transition: color var(--t-fast), opacity var(--t-fast);
+    transition: color 0.2s ease, opacity 0.2s ease;
     opacity: 0.8;
     white-space: nowrap;
   }
@@ -68,5 +142,86 @@ const links = [
   .nav__link.is-active {
     opacity: 1;
     color: white;
+  }
+
+  /* ---- Responsive: medium screens ---- */
+  @media (max-width: 1440px) {
+    .nav {
+      padding: 12px 28px;
+      gap: 24px;
+    }
+
+    .nav__links {
+      gap: 18px;
+    }
+
+    .nav__link {
+      font-size: 0.75rem;
+    }
+  }
+
+  /* ---- Responsive: tablet/mobile ---- */
+  @media (max-width: 1024px) {
+    .nav {
+      padding: 12px 20px;
+    }
+
+    .nav__toggle {
+      display: flex;
+    }
+
+    .nav__links {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 32px;
+      margin-left: 0;
+      background: rgba(4, 15, 19, 0.96);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      z-index: 51;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-20px);
+      transition: opacity 0.35s ease, transform 0.35s ease, visibility 0.35s ease;
+    }
+
+    .nav__links.is-open {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .nav__link {
+      font-size: 22px;
+      font-weight: var(--f-weight-regular);
+      opacity: 1;
+      color: #e0e0e0;
+      padding: 8px 0;
+    }
+
+    .nav__link:hover,
+    .nav__link.is-active {
+      color: white;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .nav {
+      padding: 14px 18px;
+    }
+
+    .nav__links {
+      gap: 26px;
+    }
+
+    .nav__link {
+      font-size: 18px;
+    }
   }
 </style>
