@@ -1,0 +1,154 @@
+---
+const phone = '971XXXXXXXXX'; // Replace with actual WhatsApp number
+const message = encodeURIComponent('Hello, I have questions about establishing in the UAE.');
+---
+
+<div class="wa-float" id="wa-float">
+  <div class="wa-bubble">
+    <span>Have questions about establishing in the UAE?</span>
+    <button class="wa-bubble-close" aria-label="Close">&times;</button>
+  </div>
+  <a
+    class="wa-btn"
+    href={`https://wa.me/${phone}?text=${message}`}
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Chat on WhatsApp"
+  >
+    <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M16.004 2.667A13.28 13.28 0 002.72 15.947a13.2 13.2 0 001.8 6.64L2.667 29.333l6.96-1.827a13.28 13.28 0 006.373 1.627h.008A13.28 13.28 0 0016.004 2.667zm0 24.32a11.02 11.02 0 01-5.62-1.54l-.4-.24-4.16 1.093 1.113-4.067-.264-.42a11.02 11.02 0 01-1.693-5.87 11.04 11.04 0 0111.02-11.023 11.04 11.04 0 0111.02 11.027 11.04 11.04 0 01-11.016 11.04zm6.047-8.26c-.333-.167-1.967-.97-2.273-1.08-.307-.113-.527-.167-.753.167-.22.333-.867 1.08-1.067 1.307-.193.22-.393.247-.727.08-.333-.167-1.407-.52-2.68-1.653-.99-.88-1.66-1.967-1.853-2.3-.193-.333-.02-.513.147-.68.147-.147.333-.387.5-.58.167-.193.22-.333.333-.553.113-.22.06-.413-.027-.58-.093-.167-.753-1.813-1.033-2.487-.273-.647-.547-.56-.753-.567-.193-.013-.42-.013-.647-.013a1.24 1.24 0 00-.9.42c-.307.333-1.173 1.147-1.173 2.793s1.2 3.24 1.367 3.467c.167.22 2.36 3.6 5.72 5.047.8.347 1.42.553 1.907.707.8.253 1.527.22 2.1.133.64-.1 1.967-.8 2.247-1.58.273-.78.273-1.447.193-1.587-.08-.14-.3-.22-.633-.387z" fill="#e4e4e4"/>
+    </svg>
+  </a>
+</div>
+
+<script>
+  const bubble = document.querySelector('.wa-bubble');
+  const closeBtn = document.querySelector('.wa-bubble-close');
+
+  if (closeBtn && bubble) {
+    closeBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      bubble.classList.add('is-hidden');
+    });
+  }
+
+  // Show bubble after 3 seconds
+  setTimeout(() => {
+    bubble?.classList.add('is-visible');
+  }, 3000);
+</script>
+
+<style>
+  .wa-float {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    z-index: 100;
+    display: flex;
+    align-items: flex-end;
+    gap: 12px;
+  }
+
+  /* Oval bubble */
+  .wa-bubble {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(4, 15, 19, 0.7);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #e4e4e4;
+    font-family: var(--f-primary);
+    font-weight: var(--f-weight-medium);
+    font-size: 13px;
+    line-height: 1.35;
+    padding: 10px 16px;
+    border-radius: 24px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    transform: translateX(10px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    pointer-events: none;
+    max-width: 220px;
+  }
+
+  .wa-bubble.is-visible {
+    opacity: 1;
+    transform: translateX(0);
+    pointer-events: auto;
+  }
+
+  .wa-bubble.is-hidden {
+    opacity: 0;
+    transform: translateX(10px);
+    pointer-events: none;
+  }
+
+  .wa-bubble-close {
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 18px;
+    cursor: pointer;
+    padding: 0;
+    line-height: 1;
+    flex-shrink: 0;
+    transition: color 0.2s ease;
+  }
+
+  .wa-bubble-close:hover {
+    color: white;
+  }
+
+  /* WhatsApp button */
+  .wa-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: rgba(4, 15, 19, 0.7);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    flex-shrink: 0;
+  }
+
+  .wa-btn:hover {
+    transform: scale(1.08);
+    background: rgba(4, 15, 19, 0.85);
+    box-shadow: 0 6px 32px rgba(0, 0, 0, 0.5);
+  }
+
+  .wa-btn svg {
+    width: 30px;
+    height: 30px;
+  }
+
+  /* Mobile */
+  @media (max-width: 480px) {
+    .wa-float {
+      bottom: 18px;
+      right: 16px;
+      gap: 8px;
+    }
+    .wa-btn {
+      width: 48px;
+      height: 48px;
+    }
+    .wa-btn svg {
+      width: 26px;
+      height: 26px;
+    }
+    .wa-bubble {
+      font-size: 12px;
+      padding: 8px 12px;
+      max-width: 180px;
+    }
+  }
+</style>

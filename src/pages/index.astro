@@ -10,6 +10,7 @@ import WhatNGSProvides from '../components/WhatNGSProvides.astro';
 import CoreServiceStructure from '../components/CoreServiceStructure.astro';
 import TargetClientProfile from '../components/TargetClientProfile.astro';
 import FinalCTA from '../components/FinalCTA.astro';
+import WhatsAppButton from '../components/WhatsAppButton.astro';
 const cdn = import.meta.env.PUBLIC_CDN_URL || '';
 ---
 
@@ -49,5 +50,6 @@ const cdn = import.meta.env.PUBLIC_CDN_URL || '';
     <FinalCTA />
   </div>
 
+  <WhatsAppButton />
   <script src="../scripts/main.js"></script>
 </Layout>

@@ -221,8 +221,9 @@ const cdn = import.meta.env.PUBLIC_CDN_URL || '';
   /* ≤1024 — 2x2 grid */
   @media (max-width: 1024px) {
     #section-services .cs-layout {
-      padding: 0 5% !important;
+      padding: 80px 5% 40px !important;
       align-items: center;
+      justify-content: flex-start;
     }
     #section-services .cs-grid {
       max-width: 90vw;
@@ -242,8 +243,9 @@ const cdn = import.meta.env.PUBLIC_CDN_URL || '';
   @media (max-width: 768px) {
     #section-services .cs-gradient-left { width: 100%; }
     #section-services .cs-layout {
-      padding: 0 20px !important;
-      gap: 16px;
+      padding: 80px 20px 40px !important;
+      gap: 12px;
+      justify-content: flex-start;
     }
     #section-services .cs-headline { font-size: 28px; }
     #section-services .cs-subheadline { font-size: 18px; }
@@ -269,13 +271,20 @@ const cdn = import.meta.env.PUBLIC_CDN_URL || '';
 
   /* ≤480 */
   @media (max-width: 480px) {
-    #section-services .cs-layout { padding: 0 12px !important; gap: 12px; }
-    #section-services .cs-headline { font-size: 22px; }
-    #section-services .cs-subheadline { font-size: 15px; }
-    #section-services .cs-card { padding: 14px 12px; }
-    #section-services .cs-card-icon { width: 48px; height: 48px; }
-    #section-services .cs-card-title { font-size: 14px; }
-    #section-services .cs-card-desc { font-size: 12px; }
+    #section-services .cs-layout { padding: 70px 12px 30px !important; gap: 8px; }
+    #section-services .cs-headline { font-size: 20px; }
+    #section-services .cs-subheadline { font-size: 14px; }
+    #section-services .cs-grid { gap: 8px; }
+    #section-services .cs-card {
+      padding: 10px 12px;
+      flex-direction: row;
+      align-items: center;
+      text-align: left;
+      gap: 12px;
+    }
+    #section-services .cs-card-icon { width: 40px; height: 40px; margin-bottom: 0; }
+    #section-services .cs-card-title { font-size: 13px; }
+    #section-services .cs-card-desc { font-size: 11px; }
     #section-services .cs-cta .cta-btn--lg.cta-btn {
       padding: 14px 24px;
       font-size: 13px;

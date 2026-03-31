@@ -271,12 +271,12 @@ const cdn = import.meta.env.PUBLIC_CDN_URL || '';
   }
 
   @media (max-width: 1024px) {
-    .wp-layout { gap: 1.5vh; padding: 0 4%; }
-    .wp-cards { gap: 12px; }
+    .wp-layout { gap: 1.5vh; padding: 80px 4% 40px; justify-content: flex-start; }
+    .wp-cards { gap: 12px; flex-direction: column; align-items: center; }
     .wp-card {
-      width: 44vw;
+      width: 90%;
       height: auto;
-      padding: 12px 16px;
+      padding: 14px 18px;
     }
     .wp-card:hover {
       height: auto;
@@ -287,8 +287,8 @@ const cdn = import.meta.env.PUBLIC_CDN_URL || '';
       min-width: 60px;
       min-height: 60px;
     }
-    .wp-card-short { font-size: clamp(12px, 1.5vw, 20px); }
-    .wp-card-full { font-size: clamp(11px, 1.3vw, 16px); }
+    .wp-card-short { font-size: 16px; }
+    .wp-card-full { font-size: 14px; }
     .wp-cta .cta-btn--lg.cta-btn {
       padding: 14px 36px;
       font-size: 0.85rem;
@@ -297,9 +297,10 @@ const cdn = import.meta.env.PUBLIC_CDN_URL || '';
 
   @media (max-width: 768px) {
     .wp-gradient-top { height: 100%; }
-    .wp-layout {
-      padding: 0 20px;
+    #section-provides .wp-layout {
+      padding: 100px 20px 40px;
       gap: 16px;
+      justify-content: flex-start;
     }
     .wp-headline { font-size: 28px; }
     .wp-subheadline { font-size: 18px; }
