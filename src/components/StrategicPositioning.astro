@@ -1,15 +1,15 @@
 ---
-const cdn = import.meta.env.PUBLIC_CDN_URL || '';
+const strategicVideo = 'https://pub-1177376bfc1641b2aeba0cd63a27cb3a.r2.dev/videos/S-001.mp4';
 ---
 
-<section class="section" id="section-strategic" data-section="strategic" data-video={`${cdn}/videos/Secuencia 003.mp4`}>
+<section class="section" id="section-strategic" data-section="strategic" data-video={strategicVideo}>
   <video class="section__video" muted playsinline preload="none"></video>
 
   <div class="gradient-left-teal"></div>
   <div class="gradient-top"></div>
   <div class="gradient-bottom"></div>
 
-  <div class="sp__panel anim-fade-left">
+  <div class="sp__panel anim-fade-left" style="--delay: 5s">
     <h2 class="sp__title">
       A country built for global mobility, investment, and long-term security
     </h2>
@@ -35,7 +35,7 @@ const cdn = import.meta.env.PUBLIC_CDN_URL || '';
   </div>
 
   <!-- Right side group: Badge + Connector + Map (single SVG) -->
-  <div class="sp__right-group anim-fade-right">
+  <div class="sp__right-group anim-fade-right" style="--delay: 5s">
     <img src="/vectormapa1920.svg" alt="" class="sp__right-svg" />
   </div>
 </section>

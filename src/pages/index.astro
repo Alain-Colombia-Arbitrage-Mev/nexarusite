@@ -11,7 +11,6 @@ import CoreServiceStructure from '../components/CoreServiceStructure.astro';
 import TargetClientProfile from '../components/TargetClientProfile.astro';
 import FinalCTA from '../components/FinalCTA.astro';
 import WhatsAppButton from '../components/WhatsAppButton.astro';
-const cdn = import.meta.env.PUBLIC_CDN_URL || '';
 ---
 
 <Layout title="Nexaru Global Services — UAE Migration & Investment">
@@ -22,31 +21,25 @@ const cdn = import.meta.env.PUBLIC_CDN_URL || '';
     <!-- 0: Hero -->
     <Hero />
 
-    <!-- 1: Transition to Strategic Positioning -->
-    <Transition id="trans-02" video={`${cdn}/videos/Secuencia 002.mp4`} index={1} />
-
-    <!-- 2: Strategic Positioning -->
+    <!-- 1: Strategic Positioning -->
     <StrategicPositioning />
 
-    <!-- 3: Transition to Key Advantages -->
-    <Transition id="trans-04" video={`${cdn}/videos/Secuencia 004.mp4`} index={3} />
+    <!-- 2: Transition to Key Advantages -->
+    <Transition id="trans-04" video="https://pub-1177376bfc1641b2aeba0cd63a27cb3a.r2.dev/videos/S-003.mp4" index={2} />
 
-    <!-- 4: Key Advantages of UAE -->
+    <!-- 3: Key Advantages of UAE -->
     <KeyAdvantages />
 
-    <!-- 5: What NGS Provides -->
+    <!-- 4: What NGS Provides -->
     <WhatNGSProvides />
 
-    <!-- 6: Transition to Core Services -->
-    <Transition id="trans-07" video={`${cdn}/videos/Secuencia 007.mp4`} index={6} />
-
-    <!-- 7: Core Service Structure -->
+    <!-- 5: Core Service Structure -->
     <CoreServiceStructure />
 
-    <!-- 8: Target Client Profile -->
+    <!-- 6: Target Client Profile -->
     <TargetClientProfile />
 
-    <!-- 9: Final CTA -->
+    <!-- 7: Final CTA -->
     <FinalCTA />
   </div>
 

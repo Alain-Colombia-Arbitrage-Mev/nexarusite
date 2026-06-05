@@ -5,10 +5,11 @@ const coreServices = [
   { title: 'Investor and Founder Migration', desc: 'Support for entrepreneurs, investors, and founders establishing operational base in UAE.', icon: '/icons/money-investor.png' },
   { title: 'Institutional and Regulatory Coordination', desc: 'Direct management of regulatory processes and compliance requirements.', icon: '/icons/documents-regulatory.png' },
 ];
-const cdn = import.meta.env.PUBLIC_CDN_URL || '';
+const coreServicesVideo = 'https://pub-1177376bfc1641b2aeba0cd63a27cb3a.r2.dev/videos/S-006.mp4';
+const coreServicesContentDelay = 6;
 ---
 
-<section class="section" id="section-services" data-section="services" data-video={`${cdn}/videos/Secuencia 007.mp4`}>
+<section class="section" id="section-services" data-section="services" data-video={coreServicesVideo}>
   <video class="section__video" muted playsinline preload="none"></video>
 
   <div class="cs-gradient-left"></div>
@@ -17,17 +18,17 @@ const cdn = import.meta.env.PUBLIC_CDN_URL || '';
 
   <div class="section__content cs-layout">
     <div class="cs-header">
-      <h2 class="cs-headline anim-fade-left">
+      <h2 class="cs-headline anim-fade-left" style={`--delay: ${coreServicesContentDelay}s`}>
         Complete alignment
       </h2>
-      <p class="cs-subheadline anim-fade-left">
+      <p class="cs-subheadline anim-fade-left" style={`--delay: ${coreServicesContentDelay + 0.1}s`}>
         across your personal and corporate presence
       </p>
     </div>
 
     <div class="cs-grid">
       {coreServices.map((item, i) => (
-        <div class="cs-card anim-scale-in" style={`--delay: ${i * 0.1}s`}>
+        <div class="cs-card anim-scale-in" style={`--delay: ${coreServicesContentDelay + 0.2 + i * 0.1}s`}>
           <div class="cs-card-icon">
             <img src={item.icon} alt="" class="cs-card-icon-img" />
           </div>
@@ -37,7 +38,7 @@ const cdn = import.meta.env.PUBLIC_CDN_URL || '';
       ))}
     </div>
 
-    <div class="cs-cta anim-fade-up">
+    <div class="cs-cta anim-fade-up" style={`--delay: ${coreServicesContentDelay + 0.7}s`}>
       <button class="cta-btn cta-btn--lg">
         Begin Your Process
       </button>
