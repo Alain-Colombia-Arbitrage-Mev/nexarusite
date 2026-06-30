@@ -80,9 +80,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const video = nextSection.querySelector('video');
     if (video) {
       const videoSrc = nextSection.dataset.video;
-      if (videoSrc && video.src !== location.origin + videoSrc && !video.src.endsWith(videoSrc)) {
-        video.src = videoSrc;
-        video.load();
+      if (videoSrc) {
+        // Robust compare: video.src is an absolute, URL-encoded string.
+        // Resolve dataset.video the same way so spaces/parens don't cause needless reloads.
+        const resolved = new URL(videoSrc, location.href).href;
+        if (video.src !== resolved) {
+          video.src = videoSrc;
+          video.load();
+        }
       }
       video.currentTime = 0;
       video.loop = false;
@@ -203,20 +208,22 @@ document.addEventListener('DOMContentLoaded', () => {
   // 3. Video Preloading
   // ========================================
   function preloadAdjacentVideos(index) {
-    const toPreload = [index - 1, index + 1, index + 2].filter(
-      i => i >= 0 && i < sections.length
-    );
+    // Only preload the immediate next video. With faststart (moov at front) the
+    // browser streams progressively, so preloading just the next clip keeps the
+    // transition seamless without 3 large downloads competing for bandwidth.
+    const next = sections[index + 1];
+    if (!next) return;
 
-    toPreload.forEach(i => {
-      const section = sections[i];
-      const video = section.querySelector('video');
-      const videoSrc = section.dataset.video;
-      if (video && videoSrc && !video.src.endsWith(videoSrc)) {
+    const video = next.querySelector('video');
+    const videoSrc = next.dataset.video;
+    if (video && videoSrc) {
+      const resolved = new URL(videoSrc, location.href).href;
+      if (video.src !== resolved) {
         video.preload = 'auto';
         video.src = videoSrc;
         video.load();
       }
-    });
+    }
   }
 
   // ========================================

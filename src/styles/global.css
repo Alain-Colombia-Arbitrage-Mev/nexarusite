@@ -49,7 +49,9 @@
 html {
   scroll-behavior: auto; /* GSAP handles scroll */
   overflow: hidden;
-  font-size: 16px;
+  /* Fluid root: stays 16px on desktop, scales down gently on smaller screens.
+     All rem-based sizes (cards, buttons) shrink proportionally to avoid overflow. */
+  font-size: clamp(13px, 0.4vw + 12px, 16px);
 }
 
 body {
@@ -60,6 +62,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   overflow: hidden;
   height: 100vh;
+  height: 100dvh; /* account for mobile browser chrome */
   width: 100vw;
 }
 
@@ -98,6 +101,7 @@ button {
   inset: 0;
   width: 100vw;
   height: 100vh;
+  height: 100dvh; /* fill mobile viewport excluding browser chrome */
   overflow: hidden;
   will-change: opacity, transform;
   opacity: 0;
@@ -287,7 +291,7 @@ button {
   -webkit-backdrop-filter: blur(6px);
   border-radius: var(--glass-radius);
   padding: 18px 27px;
-  width: 440px;
+  width: min(440px, 90vw);
   height: 145px;
 }
 
@@ -333,7 +337,7 @@ button {
   -webkit-backdrop-filter: blur(8px);
   border-radius: 24px;
   padding: 24px 36px;
-  width: 498px;
+  width: min(498px, 92vw);
 }
 
 .service-card__icon {
@@ -360,7 +364,7 @@ button {
 .core-card {
   background: var(--glass-bg);
   border-radius: 16px;
-  width: 364px;
+  width: min(364px, 88vw);
   height: 275px;
   display: flex;
   flex-direction: column;
@@ -408,7 +412,7 @@ button {
   -webkit-backdrop-filter: blur(3.5px);
   border-radius: 18px;
   padding: 18px 26px;
-  width: 451px;
+  width: min(451px, 90vw);
   height: 70px;
 }
 
