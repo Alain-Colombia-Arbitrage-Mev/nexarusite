@@ -440,6 +440,13 @@ button {
   white-space: nowrap;
 }
 
+/* Hide the floating WhatsApp widget while the mobile nav overlay is open */
+body.nav-open .wa-float {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
 /* ========================================
    Loader
    ======================================== */

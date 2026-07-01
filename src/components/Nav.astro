@@ -38,6 +38,7 @@ const links = [
       const isOpen = links.classList.toggle('is-open');
       toggle.classList.toggle('is-open', isOpen);
       toggle.setAttribute('aria-expanded', String(isOpen));
+      document.body.classList.toggle('nav-open', isOpen);
     });
 
     links.querySelectorAll('.nav__link').forEach(link => {
@@ -45,6 +46,7 @@ const links = [
         links.classList.remove('is-open');
         toggle.classList.remove('is-open');
         toggle.setAttribute('aria-expanded', 'false');
+        document.body.classList.remove('nav-open');
       });
     });
   }
