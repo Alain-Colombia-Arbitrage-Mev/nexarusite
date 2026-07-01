@@ -90,7 +90,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       }
       video.currentTime = 0;
-      video.loop = false;
+      // Loop only sections explicitly marked (e.g. the Hero LOOP background).
+      // Narrative/content videos play once and freeze on their last frame.
+      video.loop = nextSection.dataset.loop === 'true';
       video.play().catch(() => {});
 
       if (nextSection.dataset.transition === 'true') {
