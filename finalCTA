@@ -1,0 +1,309 @@
+{
+  "version": "2.9",
+  "children": [
+    {
+      "type": "frame",
+      "id": "ZZOEO",
+      "x": 0,
+      "y": 0,
+      "name": "FINAL CALL TO ACTION",
+      "clip": true,
+      "width": 1920,
+      "height": 1080,
+      "fill": "#e6e6e6ff",
+      "stroke": {
+        "align": "inside",
+        "thickness": 1
+      },
+      "layout": "none",
+      "children": [
+        {
+          "type": "rectangle",
+          "id": "ffgai",
+          "x": 0,
+          "y": -101,
+          "name": "image 13",
+          "fill": {
+            "type": "image",
+            "enabled": true,
+            "url": "",
+            "mode": "fill"
+          },
+          "width": 1920,
+          "height": 1283,
+          "stroke": {
+            "align": "inside",
+            "thickness": 1
+          }
+        },
+        {
+          "type": "rectangle",
+          "id": "h6RDw",
+          "x": 0,
+          "y": 652,
+          "name": "Rectangle 12",
+          "fill": {
+            "type": "gradient",
+            "gradientType": "linear",
+            "enabled": true,
+            "opacity": 0.699999988079071,
+            "rotation": -359.9999878277217,
+            "size": {
+              "height": 0.9999999999999775
+            },
+            "colors": [
+              {
+                "color": "#040f13ff",
+                "position": 0
+              },
+              {
+                "color": "#040f1300",
+                "position": 1
+              }
+            ],
+            "center": {
+              "x": 0.2914062276736221,
+              "y": 0.5000000573011036
+            }
+          },
+          "width": 1920,
+          "height": 428,
+          "stroke": {
+            "align": "inside",
+            "thickness": 1
+          },
+          "effect": {
+            "type": "background_blur",
+            "radius": 20.82499933242798
+          }
+        },
+        {
+          "type": "rectangle",
+          "id": "2rSHK",
+          "x": 0,
+          "y": 491,
+          "name": "Rectangle 13",
+          "rotation": 180,
+          "flipX": true,
+          "fill": {
+            "type": "gradient",
+            "gradientType": "linear",
+            "enabled": true,
+            "opacity": 0.699999988079071,
+            "rotation": -359.9999878277217,
+            "size": {
+              "height": 0.9999999999999775
+            },
+            "colors": [
+              {
+                "color": "#040f13ff",
+                "position": 0
+              },
+              {
+                "color": "#040f1380",
+                "position": 0.754807710647583
+              },
+              {
+                "color": "#040f1300",
+                "position": 1
+              }
+            ],
+            "center": {
+              "x": 0.2914062276736221,
+              "y": 0.5000000573011036
+            }
+          },
+          "width": 1920,
+          "height": 491,
+          "stroke": {
+            "align": "inside",
+            "thickness": 1
+          },
+          "effect": {
+            "type": "background_blur",
+            "radius": 20.82499933242798
+          }
+        },
+        {
+          "type": "rectangle",
+          "id": "sRrCH",
+          "x": 1164,
+          "y": 0,
+          "name": "Rectangle 14",
+          "rotation": 89.99999749552194,
+          "flipX": true,
+          "fill": {
+            "type": "gradient",
+            "gradientType": "linear",
+            "enabled": true,
+            "opacity": 0.699999988079071,
+            "rotation": -359.9999878277217,
+            "size": {
+              "height": 0.9999999999999775
+            },
+            "colors": [
+              {
+                "color": "#040f13ff",
+                "position": 0
+              },
+              {
+                "color": "#040f1300",
+                "position": 1
+              }
+            ],
+            "center": {
+              "x": 0.2914062276736221,
+              "y": 0.5000000573011036
+            }
+          },
+          "width": 1080,
+          "height": 756.0000610351562,
+          "stroke": {
+            "align": "inside",
+            "thickness": 1
+          },
+          "effect": {
+            "type": "background_blur",
+            "radius": 20.82499933242798
+          }
+        },
+        {
+          "type": "group",
+          "id": "o3sR0",
+          "x": 170,
+          "y": 797,
+          "name": "Group 3",
+          "children": [
+            {
+              "type": "frame",
+              "id": "FomaQ",
+              "x": 0,
+              "y": 0,
+              "name": "Frame 4",
+              "width": 752,
+              "height": 132,
+              "fill": "#ffffff1a",
+              "cornerRadius": 20,
+              "stroke": {
+                "align": "inside",
+                "thickness": 1
+              },
+              "effect": {
+                "type": "shadow",
+                "shadowType": "outer",
+                "color": "#ffffff80",
+                "blur": 87.5
+              },
+              "gap": 10,
+              "padding": [
+                40,
+                50
+              ],
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "fvP7B",
+                  "name": "Start Your Migration or Investment Process",
+                  "fill": "#ffffffff",
+                  "content": "Start Your Migration or Investment Process",
+                  "textAlign": "center",
+                  "fontFamily": "Montserrat",
+                  "fontSize": 24,
+                  "fontWeight": "900"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "Oxq8u",
+              "x": 829,
+              "y": 0,
+              "name": "Frame 19",
+              "width": 752,
+              "height": 132,
+              "fill": "#ffffff1a",
+              "cornerRadius": 20,
+              "stroke": {
+                "align": "inside",
+                "thickness": 1
+              },
+              "effect": {
+                "type": "shadow",
+                "shadowType": "outer",
+                "color": "#ffffff80",
+                "blur": 87.5
+              },
+              "gap": 10,
+              "padding": [
+                40,
+                50
+              ],
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "vsJQQ",
+                  "name": "Contact Nexaru Global Services",
+                  "fill": "#ffffffff",
+                  "content": "Contact Nexaru Global Services",
+                  "textAlign": "center",
+                  "fontFamily": "Montserrat",
+                  "fontSize": 24,
+                  "fontWeight": "900"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "8lcek",
+          "x": 472,
+          "y": 697,
+          "name": "Begin with a structured assessment to determine the optimal pathway for your case.",
+          "fill": "#e8e8e8ff",
+          "textGrowth": "fixed-width",
+          "width": 977,
+          "content": "Begin with a structured assessment to determine the optimal pathway for your case.",
+          "textAlign": "center",
+          "fontFamily": "Montserrat",
+          "fontSize": 24,
+          "fontWeight": "600"
+        },
+        {
+          "type": "text",
+          "id": "HVzKw",
+          "x": 114,
+          "y": 156,
+          "name": "Establish your future from one of the world’s most strategic jurisdictions",
+          "fill": "#e8e8e8ff",
+          "textGrowth": "fixed-width",
+          "width": 1693,
+          "content": "Establish your future\nfrom one of the world’s most strategic jurisdictions",
+          "textAlign": "center",
+          "fontFamily": "Inter",
+          "fontSize": 64,
+          "fontWeight": "700"
+        },
+        {
+          "type": "text",
+          "id": "8yYoI",
+          "x": 309,
+          "y": 314,
+          "name": "Whether you are relocating personally or establishing corporate operations, Nexaru Global Services ensures your transition is structured, secure, and professionally managed.",
+          "fill": "#e8e8e8ff",
+          "textGrowth": "fixed-width",
+          "width": 1303,
+          "content": "Whether you are relocating personally or establishing corporate operations, Nexaru Global Services ensures your transition is structured, secure, and professionally managed.",
+          "textAlign": "center",
+          "fontFamily": "Montserrat",
+          "fontSize": 32,
+          "fontWeight": "normal"
+        }
+      ]
+    }
+  ]
+}

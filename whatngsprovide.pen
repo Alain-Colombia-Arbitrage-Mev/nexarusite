@@ -1,0 +1,575 @@
+{
+  "version": "2.9",
+  "children": [
+    {
+      "type": "frame",
+      "id": "EsKzg",
+      "x": -520,
+      "y": -75,
+      "name": "WHAT NEXARU GLOBAL SERVICES PROVIDES",
+      "clip": true,
+      "width": 1920,
+      "height": 1080,
+      "fill": "#040f13ff",
+      "stroke": {
+        "align": "inside",
+        "thickness": 1
+      },
+      "layout": "none",
+      "children": [
+        {
+          "type": "rectangle",
+          "id": "YVHZH",
+          "x": 1918,
+          "y": 0,
+          "name": "image 8",
+          "flipX": true,
+          "fill": {
+            "type": "image",
+            "enabled": true,
+            "url": "",
+            "mode": "fill"
+          },
+          "width": 1918,
+          "height": 1080,
+          "stroke": {
+            "align": "inside",
+            "thickness": 1
+          }
+        },
+        {
+          "type": "rectangle",
+          "id": "0oega",
+          "x": 1920,
+          "y": 0,
+          "name": "Rectangle 9",
+          "rotation": -90.00000250447808,
+          "fill": {
+            "type": "gradient",
+            "gradientType": "linear",
+            "enabled": true,
+            "rotation": -270.00000123201113,
+            "size": {
+              "height": 0.9999999999999998
+            },
+            "colors": [
+              {
+                "color": "#081d2500",
+                "position": 0
+              },
+              {
+                "color": "#081d2580",
+                "position": 0.3778901994228363
+              },
+              {
+                "color": "#081d25ff",
+                "position": 1
+              }
+            ],
+            "center": {
+              "x": 0.49999998924867406,
+              "y": 0.5000000359394954
+            }
+          },
+          "width": 558.0000610351562,
+          "height": 1920,
+          "stroke": {
+            "align": "inside",
+            "thickness": 1
+          }
+        },
+        {
+          "type": "frame",
+          "id": "6SYRT",
+          "x": 181,
+          "y": 475,
+          "name": "Component 9",
+          "width": 498.3265380859375,
+          "fill": "#0000004d",
+          "cornerRadius": 23.67346954345703,
+          "stroke": {
+            "align": "inside",
+            "thickness": 1.1836735010147095
+          },
+          "effect": {
+            "type": "background_blur",
+            "radius": 13.567858099937439
+          },
+          "gap": 28.408164978027344,
+          "padding": [
+            23.67346954345703,
+            35.51020431518555
+          ],
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "7whCY",
+              "name": "fa-solid:hands-helping",
+              "clip": true,
+              "width": 153.2857208251953,
+              "height": 153.2857208251953,
+              "fill": {
+                "type": "color",
+                "color": "#ffffffff",
+                "enabled": false
+              },
+              "stroke": {
+                "align": "inside",
+                "thickness": 1.9885715246200562
+              },
+              "layout": "none",
+              "children": [
+                {
+                  "type": "path",
+                  "id": "iGQAF",
+                  "x": -0.005462633445858955,
+                  "y": 0.005181039217859507,
+                  "name": "Vector",
+                  "geometry": "M488.0228 191.97836l-152 0 0 56c0 39.70002-32.29999 72-72 72-39.7 0-71.99999-32.29998-71.99999-72l0-121.59999-64.90001 38.99999c-19.3 11.5-31.1 32.40001-31.1 54.8l0 47.3-79.99999 46.20002c-15.3 8.79998-20.6 28.39999-11.7 43.69998l80 138.6c8.8 15.29999 28.4 20.50003 43.7 11.70002l103.4-59.70002 136.59999 0c35.29998 0 64-28.70001 64-64l16 0c17.70001 0 32-14.29998 32-32l0-64 8 0c13.29998 0 24.00003-10.70001 24.00003-24l0-48c0-13.3-10.70005-24-24.00003-24z m147.70004-37.39999l-80-138.6c-8.79999-15.3-28.40003-20.5-43.70001-11.7l-103.40003 59.7-102.20001 0c-12 0-23.69998 3.4-33.89999 9.7l-33.49999 20.9c-9.39999 5.8-15 16.1-15 27.1l0 126.29999c0 22.10001 17.89998 40 39.99999 40 22.1 0 40-17.89999 40-40l0-88 184 0c30.89999 0 56.00003 25.10001 56.00003 56l0 28.5 80-46.19999c15.29998-8.9 20.5-28.4 11.70001-43.7z",
+                  "fill": "#d5d5d5ff",
+                  "width": 153.2860107421875,
+                  "height": 122.61821746826172,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 0.11559311300516129
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "itncG",
+              "name": "Nexaru Global Services provides... structured support...",
+              "fill": "#e4e4e4ff",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Nexaru Global Services provides structured support...",
+              "fontFamily": "Montserrat",
+              "fontSize": 23.67346954345703,
+              "fontWeight": "500"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "38eJN",
+          "x": 711.28564453125,
+          "y": 477.3671875,
+          "name": "Component 10",
+          "width": 498.3265380859375,
+          "fill": "#0000004d",
+          "cornerRadius": 23.67346954345703,
+          "stroke": {
+            "align": "inside",
+            "thickness": 1.1836735010147095
+          },
+          "effect": {
+            "type": "background_blur",
+            "radius": 13.567858099937439
+          },
+          "gap": 28.408164978027344,
+          "padding": [
+            23.67346954345703,
+            35.51020431518555
+          ],
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "obWOE",
+              "name": "streamline:justice-hammer-solid",
+              "clip": true,
+              "width": 153.2857208251953,
+              "height": 153.2857208251953,
+              "fill": {
+                "type": "color",
+                "color": "#ffffffff",
+                "enabled": false
+              },
+              "stroke": {
+                "align": "inside",
+                "thickness": 0.8285714387893677
+              },
+              "layout": "none",
+              "children": [
+                {
+                  "type": "path",
+                  "id": "fSt7B",
+                  "x": 0.8868303894996643,
+                  "y": 1.3172991275787354,
+                  "name": "Vector",
+                  "geometry": "M3.796 6.14568c-0.13939-0.1393-0.24997-0.3047-0.32541-0.48675-0.07544-0.18205-0.11427-0.37718-0.11427-0.57425 0-0.19706 0.03883-0.3922 0.11427-0.57425 0.07544-0.18205 0.18602-0.34745 0.32541-0.48675l3.585-3.584c0.1393-0.13939 0.3047-0.24996 0.48675-0.32541 0.18205-0.07544 0.37718-0.11427 0.57425-0.11427 0.19706 0 0.3922 0.03883 0.57425 0.11427 0.18205 0.07544 0.34745 0.18602 0.48675 0.32541l1.583 1.584c0.28121 0.28129 0.43918 0.66275 0.43918 1.0605 0 0.39775-0.15797 0.77921-0.43918 1.0605l-1.257 1.256 3.79 3.789c0.0696 0.06973 0.12478 0.15249 0.1624 0.24355 0.03762 0.09106 0.05693 0.18863 0.05684 0.28716-0.00009 0.09852-0.01959 0.19606-0.05738 0.28705-0.03779 0.09099-0.09313 0.17364-0.16286 0.24324-0.06973 0.0696-0.15249 0.12478-0.24355 0.1624-0.09106 0.03762-0.18863 0.05693-0.28716 0.05684-0.09852-0.00009-0.19606-0.01959-0.28705-0.05738-0.09099-0.03779-0.17364-0.09313-0.24324-0.16286l-3.788-3.787-1.268 1.267c-0.28125 0.2809-0.6625 0.43868-1.06 0.43868-0.3975 0-0.77875-0.15778-1.06-0.43868l-1.585-1.584z m-2.546 6.114l-0.5 0c-0.19891 0-0.38968 0.07902-0.53033 0.21967-0.14065 0.14065-0.21967 0.33142-0.21967 0.53033 0 0.19891 0.07902 0.38968 0.21967 0.53033 0.14065 0.14065 0.33142 0.21967 0.53033 0.21967l7.5 0c0.19891 0 0.38968-0.07902 0.53033-0.21967 0.14065-0.14065 0.21967-0.33142 0.21967-0.53033 0-0.19891-0.07902-0.38968-0.21967-0.53033-0.14065-0.14065-0.33142-0.21967-0.53033-0.21967l-0.5 0 0-1.75c0-0.13261-0.05268-0.25979-0.14645-0.35355-0.09377-0.09377-0.22095-0.14645-0.35355-0.14645l-5.5 0c-0.13261 0-0.25979 0.05268-0.35355 0.14645-0.09377 0.09377-0.14645 0.22095-0.14645 0.35355l0 1.75z",
+                  "fillRule": "evenodd",
+                  "fill": "#dededeff",
+                  "width": 151.51461791992188,
+                  "height": 150.6544647216797,
+                  "stroke": {
+                    "align": "inside",
+                    "thickness": 10.948980331420898
+                  }
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "yvaz8",
+              "name": "We coordinate every stage of the process...",
+              "fill": "#e4e4e4ff",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "We coordinate every stage of the process...",
+              "fontFamily": "Montserrat",
+              "fontSize": 23.67346954345703,
+              "fontWeight": "500"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "iGzEt",
+          "x": 1241.5712890625,
+          "y": 475,
+          "name": "Component 8",
+          "width": 498.3265380859375,
+          "fill": "#0000004d",
+          "cornerRadius": 23.67346954345703,
+          "stroke": {
+            "align": "inside",
+            "thickness": 1.1836735010147095
+          },
+          "effect": {
+            "type": "background_blur",
+            "radius": 13.567858099937439
+          },
+          "gap": 28.408164978027344,
+          "padding": [
+            23.67346954345703,
+            35.51020431518555
+          ],
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "YlFAc",
+              "name": "icon-park-solid:guide-board",
+              "clip": true,
+              "width": 153.2857208251953,
+              "height": 153.2857208251953,
+              "fill": {
+                "type": "color",
+                "color": "#ffffffff",
+                "enabled": false
+              },
+              "stroke": {
+                "align": "inside",
+                "thickness": 0.8285714387893677
+              },
+              "layout": "none",
+              "children": [
+                {
+                  "type": "group",
+                  "id": "6D9o6",
+                  "x": 19.160715103149414,
+                  "y": 12.77373276146318,
+                  "name": "Group",
+                  "children": [
+                    {
+                      "type": "path",
+                      "id": "bbdCq",
+                      "x": 57.48214340209961,
+                      "y": 0,
+                      "name": "Vector",
+                      "geometry": "M0 0l0 37",
+                      "width": 0,
+                      "height": 118.15774536132812,
+                      "stroke": {
+                        "align": "center",
+                        "thickness": 12.773810386657715,
+                        "join": "round",
+                        "cap": "round",
+                        "fill": "#dededeff"
+                      }
+                    },
+                    {
+                      "type": "path",
+                      "id": "8b0Ha",
+                      "x": 0,
+                      "y": 12.773674388805375,
+                      "name": "Vector",
+                      "geometry": "M18 0l15.545 0 2.455 4-2.455 4-15.545 0 0-8z m0 14l-15.545 0-2.455 4 2.455 4 15.545 0 0-8z",
+                      "fill": "#dededeff",
+                      "width": 114.96428680419922,
+                      "height": 70.2559585571289,
+                      "stroke": {
+                        "align": "center",
+                        "thickness": 12.773810386657715,
+                        "join": "round",
+                        "fill": "#dededeff"
+                      }
+                    },
+                    {
+                      "type": "path",
+                      "id": "ZaxUl",
+                      "x": 31.934795379638672,
+                      "y": 121.35132922736739,
+                      "name": "Vector",
+                      "geometry": "M0 0l16 0",
+                      "width": 51.09524154663086,
+                      "height": 0,
+                      "stroke": {
+                        "align": "center",
+                        "thickness": 12.773810386657715,
+                        "join": "round",
+                        "cap": "round",
+                        "fill": "#dededeff"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "GvfLL",
+              "name": "Our role extends beyond processing...",
+              "fill": "#e4e4e4ff",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Our role extends beyond processing...",
+              "fontFamily": "Montserrat",
+              "fontSize": 23.67346954345703,
+              "fontWeight": "500"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "id": "5ee6k",
+          "x": 485,
+          "y": 253,
+          "name": "Institutional support",
+          "fill": "#e4e4e4ff",
+          "content": "Institutional support",
+          "fontFamily": "Montserrat",
+          "fontSize": 70,
+          "fontWeight": "800"
+        },
+        {
+          "type": "text",
+          "id": "toUIl",
+          "x": 584,
+          "y": 338,
+          "name": "Tituloapoyo",
+          "fill": "#e4e4e4ff",
+          "content": "for your migration and establishment",
+          "fontFamily": "Montserrat",
+          "fontSize": 40,
+          "fontWeight": "normal"
+        },
+        {
+          "type": "rectangle",
+          "id": "vghDu",
+          "x": 0,
+          "y": 809,
+          "name": "Rectangle 12",
+          "fill": {
+            "type": "gradient",
+            "gradientType": "linear",
+            "enabled": true,
+            "opacity": 0.699999988079071,
+            "rotation": -359.9999878277217,
+            "size": {
+              "height": 0.9999999999999775
+            },
+            "colors": [
+              {
+                "color": "#040f13ff",
+                "position": 0
+              },
+              {
+                "color": "#040f1300",
+                "position": 1
+              }
+            ],
+            "center": {
+              "x": 0.2914062276736221,
+              "y": 0.5000000573011036
+            }
+          },
+          "width": 1920,
+          "height": 271,
+          "stroke": {
+            "align": "inside",
+            "thickness": 1
+          },
+          "effect": {
+            "type": "background_blur",
+            "radius": 20.82499933242798
+          }
+        },
+        {
+          "type": "group",
+          "id": "jVqB7",
+          "x": 85,
+          "y": 50,
+          "name": "Group 1",
+          "children": [
+            {
+              "type": "path",
+              "id": "RqSOw",
+              "x": 0,
+              "y": 0,
+              "name": "Vector",
+              "geometry": "M8.89986 55.42438c-12.46-11.77-11.66-33.98 1.29-46.08 13.56-12.67 35.64-12.49 46.35 0.75-3.56 2.38-7.09 4.73-10.67 7.12-9.62-5.48-18.73-5.73-26.78 2.2-5.52 5.44-6.9 12.15-4.65 20.34 8.85-5.75 17.16-11.15 25.90999-16.84 1.86 2.73 3.51 5.13 5.59001 8.17-12.58 8.27-24.86 16.34-37.04 24.34z",
+              "fill": "#ffffffff",
+              "width": 42.307498931884766,
+              "height": 41.472808837890625,
+              "stroke": {
+                "align": "inside",
+                "thickness": 1
+              }
+            },
+            {
+              "type": "path",
+              "id": "gIzsV",
+              "x": 11.635201454162598,
+              "y": 16.03151512145996,
+              "name": "Vector",
+              "geometry": "M37.79 6.85c3.64-2.37 7.08999-4.61 10.53999-6.85 5.96 9.21 2.62 27.4-7.84999 36.55-11.61 10.15-28.94 11.80999-40.48 3.12 3.83-2.52 7.44-5.04 11.22-7.29 1.02-0.61 2.52999-0.64 3.78999-0.57 14.31 0.81 23.5-8.24 22.79001-22.49-0.03-0.66 0-1.32 0-2.47l-0.01 0z",
+              "fill": "#ffffffff",
+              "width": 38.36445617675781,
+              "height": 33.888153076171875,
+              "stroke": {
+                "align": "inside",
+                "thickness": 1
+              }
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "i0YKp",
+          "x": 363,
+          "y": 63,
+          "name": "Menu",
+          "stroke": {
+            "align": "inside",
+            "thickness": 1
+          },
+          "gap": 39,
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "VKrhr",
+              "name": "STRATEGIC POSITIONING",
+              "fill": "#d5d5d5ff",
+              "textGrowth": "fixed-width",
+              "width": 259,
+              "content": "STRATEGIC POSITIONING",
+              "textAlignVertical": "middle",
+              "fontFamily": "Montserrat",
+              "fontSize": 20,
+              "fontWeight": "300"
+            },
+            {
+              "type": "text",
+              "id": "Z290u",
+              "name": "KEY ADVANTAGES OF UAE",
+              "fill": "#d5d5d5ff",
+              "textGrowth": "fixed-width",
+              "width": 271,
+              "content": "KEY ADVANTAGES OF UAE",
+              "textAlignVertical": "middle",
+              "fontFamily": "Montserrat",
+              "fontSize": 20,
+              "fontWeight": "300"
+            },
+            {
+              "type": "text",
+              "id": "eGuBt",
+              "name": "WHAT NGS PROVIDES",
+              "fill": "#d5d5d5ff",
+              "content": "WHAT NGS  PROVIDES",
+              "textAlignVertical": "middle",
+              "fontFamily": "Montserrat",
+              "fontSize": 20,
+              "fontWeight": "300"
+            },
+            {
+              "type": "text",
+              "id": "CaqDH",
+              "name": "CORE SERVICE STRUCTURE",
+              "fill": "#d5d5d5ff",
+              "textGrowth": "fixed-width",
+              "width": 295,
+              "content": "CORE SERVICE STRUCTURE",
+              "textAlignVertical": "middle",
+              "fontFamily": "Montserrat",
+              "fontSize": 20,
+              "fontWeight": "300"
+            },
+            {
+              "type": "text",
+              "id": "A04hV",
+              "name": "TARGET CLIENT PROFILE",
+              "fill": "#d5d5d5ff",
+              "textGrowth": "fixed-width",
+              "width": 256,
+              "content": "TARGET CLIENT PROFILE",
+              "textAlignVertical": "middle",
+              "fontFamily": "Montserrat",
+              "fontSize": 20,
+              "fontWeight": "300"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "mHEJF",
+          "x": 658,
+          "y": 813,
+          "name": "Frame 4",
+          "width": 604,
+          "height": 132,
+          "fill": "#ffffff1a",
+          "cornerRadius": 20,
+          "stroke": {
+            "align": "inside",
+            "thickness": 1
+          },
+          "effect": {
+            "type": "shadow",
+            "shadowType": "outer",
+            "color": "#ffffff80",
+            "blur": 87.5
+          },
+          "gap": 10,
+          "padding": [
+            40,
+            50
+          ],
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "3gVUh",
+              "name": "Request a Private Consultation",
+              "fill": "#ffffffff",
+              "content": "Request a Private Consultation",
+              "textAlign": "center",
+              "fontFamily": "Montserrat",
+              "fontSize": 24,
+              "fontWeight": "900"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
